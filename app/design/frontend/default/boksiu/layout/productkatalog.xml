@@ -1,0 +1,21 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+  <productkataloges_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="productkatalog/index" name="productkatalog_index" template="productkatalog/index.phtml"/>   
+    </reference>   
+  </productkataloges_index_index>  
+   <productkataloges_view_details>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="productkatalog/details" name="productkatalogesview" template="productkatalog/details.phtml"/>   
+    </reference>   
+  </productkataloges_view_details>   
+ 
+</layout>   
+	

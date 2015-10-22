@@ -1,0 +1,82 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<div class="spacer"></div>
+<div class="footer_main">
+    <div class="footer">
+	<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('footer_links')->toHtml() ?>
+
+	<div class="right_div">
+		<h1><?php echo $this->__('Newsletter signup') ?></h1>
+	    <div class="search_div_ftr">
+		
+		<?php echo $this->getLayout()->createBlock('core/template')->setTemplate('ajaxnewsletter/index.phtml')->toHtml(); ?>
+		<div class="spacer"></div>
+		<div class="social_icon_ftr">
+			<ul>
+			<li><a href="https://www.facebook.com/haslasmykker" target="_blank"><img src="<?php echo $this->getSkinUrl("images/scl_01.png")?>" width="23" height="23" alt="" /></a></li>
+			<li><a href="http://instagram.com/haslasmykker" target="_blank"><img src="<?php echo $this->getSkinUrl("images/instagram-icon.png")?>" width="23" height="23" alt="" /></a></li>
+			<!--<li><a href="http://www.haslablogg.no/" target="_blank"><img src="<?php echo $this->getSkinUrl("images/scl_03.png")?>" width="23" height="23" /></a></li>-->
+		    </ul>
+		</div>
+		
+		
+	    </div>
+	<div class="spacer"></div>
+	</div>
+	<div class="spacer"></div>
+	<?php if (Mage::app()->getStore()->getCode()=='us'){?>
+	<div class="supprt_text">Are you missing any jewelry? Please contact us here: <a href="mailto:support@hasla.no" style="color: #3b3d43; text-transform: lowercase;">support@hasla.no</a>
+	<br /><br />
+	<?php }else{?>
+	<div class="supprt_text">Smykker du ikkje kan finne? Ta kontakt her: <a href="mailto:support@hasla.no" style="color: #3b3d43; text-transform: lowercase;">support@hasla.no</a>
+	<br /><br />
+	<?php }?>
+	<?php echo $this->__('Payment options') ?><br />
+	<img alt="" src="<?php echo $this->getSkinUrl("images/visa_master.jpg")?>" />
+	</div>
+	<div class="spacer"></div>
+    </div>
+
+	<div class="spacer"></div>
+            <div class="bottom_links">
+            	<ul>
+                	<li><a href="#">&copy; HASLA</a></li>
+                    <li>|</li>
+                    <li><a href="#">Org nr: 976 702 824</a></li>
+                    <li>|</li>
+                    <li><a href="#"> Editor: Gunnhild Hasla</a></li>
+                    <li>|</li>
+                    <li><a href="#">Photo: Anne Hasla</a></li>
+                    <li>|</li>
+                    <li><a href="#">Design: Tress Design</a></li>
+                    <li>|</li>
+                    <li><a href="#">Project Manager: iSocial</a></li>
+                </ul>
+            </div>
+        	<div class="spacer"></div>
+</div>
+

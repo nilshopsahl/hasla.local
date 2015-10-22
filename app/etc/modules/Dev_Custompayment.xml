@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<config>
+	<modules>
+			<Dev_Custompayment>
+				<codePool>community</codePool>
+				<active>true</active>
+				<depends>
+					<Mage_Payment/>
+					<Amasty_Groupcat/>
+				</depends>		
+			</Dev_Custompayment>	
+	</modules>
+</config>	

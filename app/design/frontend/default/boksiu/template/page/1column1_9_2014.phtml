@@ -1,0 +1,170 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <?php echo $this->getChildHtml('header') ?>
+        <div class="main_div">
+            
+			<?php echo $this->getChildHtml('breadcrumbs') ?>
+
+				
+                    <?php echo $this->getChildHtml('global_messages') ?>
+					
+					<?php 
+			
+					$currentPagetype = Mage::app()->getFrontController()->getAction()->getFullActionName();
+					if($currentPagetype == 'catalog_category_view' || $currentPagetype == 'shopcategory_index_index' ||  $currentPagetype == 'catalog_product_view' ){ ?>
+					
+					<div class="main_slider1">
+					<?php $currentUrl = Mage::helper('core/url')->getCurrentUrl(); ?>
+					<?php 
+					//echo Mage::app()->getFrontController()->getAction()->getFullActionName();
+					 $curidcat = Mage::getModel('catalog/layer')->getCurrentCategory()->getId();
+					 $parentcatid = Mage::getModel('catalog/layer')->getCurrentCategory()->getParentId();
+					if(($curidcat=='2' || $parentcatid == '2') && $curidcat!='7' &&  stristr($currentUrl,"bunad")==false ){
+					$cat_id = 2; 
+					$imageurl = $this->getSkinUrl('images/category_button.png');
+					}
+					else if( $curidcat=='23' || $parentcatid == '23' || stristr($currentUrl,"bunad")==true ){
+					$cat_id = 23; 
+					$imageurl = $this->getSkinUrl('images/collection_button.png');
+					}
+					else if($curidcat=='7' || $parentcatid == '7')
+					{
+					$cat_id = 7; 
+					$imageurl = $this->getSkinUrl('images/collection_button.png');
+					}
+					?>
+					<?php $category = Mage::getModel('catalog/category')->load($cat_id); ?>
+					<?php 
+					      $shopbycat2 = explode(",",Mage::getModel("catalog/category")->load($cat_id)->getChildren());	
+					?>
+		
+									
+				<div class="product_main_res">
+                	<div class="produc_with_div">
+                    	<div class="collection_button"><img src="<?php echo $imageurl;?>" id="shop_collection_opner" width="104" height="14"></div>
+						<?php if(Mage::getModel('catalog/layer')->getCurrentCategory()==true) {
+						
+						?>
+						<div class="collcetion_img">
+						<img src='<?php echo Mage::getBaseUrl('media').'catalog/category/'.Mage::getModel('catalog/layer')->getCurrentCategory()->getThumbnail(); ?>' height="67" width="67"/>
+						</div>
+	
+						
+						
+					<?php	} else { ?>
+                        <div class="collcetion_img"></div>
+						<?php } ?>
+                    </div>
+                    <div class="scrl_menu1" id="shop_by_collection" style="display: none;">
+						<?php foreach($shopbycat2 as $catg_data){
+						
+							$catg_data2 = Mage::getModel('catalog/category')->load($catg_data); 
+							if($catg_data2->getName() !='Shop By Collection' && $catg_data2->getName() !='Bunad' && $catg_data2->getName() !='Lookbook'){
+							?>
+							<div class="menu_02"><a href="<?php echo $catg_data2->getUrl();?>" <?php echo (stristr($currentUrl,$catg_data2->getUrl())==true)?'id="menu_active"':'';?>><?php echo $catg_data2->getName();?></a></div>		
+						
+						<?php   } 
+						
+						} ?>		
+                        
+                     </div>
+                	<div class="spacer"></div>
+                </div>
+                <div class="right_product_main">
+                 
+                    <div class="spacer"> </div>
+                 </div>
+                <div class="spacer"></div>
+            </div>
+			<?php } 
+			
+			if($currentPagetype == 'cms_page_view' ){ 
+			
+			$currentUrl = Mage::helper('core/url')->getCurrentUrl();
+			if(stristr($currentUrl,"about")==true || stristr($currentUrl,"production")==true || stristr($currentUrl,"about-environment")==true){
+			
+			?>
+			<div class="main_slider1">
+			<div class="product_main_res">
+                	<div class="produc_with_div">
+                    	<div class="collection_button">
+                        <img width="104" height="14" id="shop_collection_opner" src="<?php echo $this->getBaseUrl(); ?>skin/frontend/default/boksiu/images/about_hasla_button.png"></div>
+                        <div class="collcetion_img"></div>
+                    </div>
+                    <div style="display: none;" id="shop_by_collection" class="scrl_menu1">
+													
+							<div class="menu_02"><a href="http://hasla.indromen.com/index.php/about" <?php if(stristr($currentUrl,"about")!=true&& stristr($currentUrl,"about")==true ){ echo 'id="menu_active"'; } ?>>About Us</a></div>		
+						
+													
+							<div class="menu_02"><a href="http://hasla.indromen.com/index.php/production" <?php echo (stristr($currentUrl,"production")==true)?'id="menu_active"':'';?>>Production</a></div>		
+						
+							<?php /*						
+							<div class="menu_02"><a href="http://hasla.indromen.com/index.php/about-environment" <?php echo (stristr($currentUrl,"about-environment")==true)?'id="menu_active"':'';?>>About envirement</a></div>
+							*/?>
+                            
+                            <div class="menu_02"><a target="_blank" href="http://www.haslablogg.no/-">Blog</a></div>		
+				
+								
+                        
+                     </div>
+                	<div class="spacer"></div>
+                </div>
+				</div>
+			
+			<?php } 
+			
+			}
+			
+			?>
+			
+			
+            <?php echo $this->getChildHtml('content') ?>
+                
+            <div class="spacer"></div>
+        </div>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>

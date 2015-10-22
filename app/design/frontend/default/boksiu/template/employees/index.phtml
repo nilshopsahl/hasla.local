@@ -1,0 +1,25 @@
+  <div class="main_slider">
+  <div style="float: left;">
+<?php
+  $employee = $this->getEmployess();
+  //print_r($employee->getData());
+  $storeid=Mage::app()->getStore()->getStoreId();
+?>
+<?php foreach($employee as $data):?>
+	<?php if($data->getStatus()=='0'):?>
+  
+		<div class="thumb_nail_02">
+		         <div class="img"><img width="100%" height="auto" src="<?php echo Mage::getBaseUrl('media').$data->getImage();?>" style="border-bottom: none;"></div>
+		         <div class="buy_div">
+		             <?php if($storeid==2) { ?>
+		            <div class="employee-box-set"><b><?php echo $data->getName();?></b><br /><?php echo $data->getDescription();?></div>
+				 <?php } else { ?>
+				     <div class="employee-box-set"><b><?php echo $data->getName();?></b><br /><?php echo $data->getDescription_en();?></div>
+				 <?php } ?>
+		         </div>
+		      <div class="spacer"></div>
+		</div>
+        
+	<?php endif;?>
+<?php endforeach;?></div>
+</div>

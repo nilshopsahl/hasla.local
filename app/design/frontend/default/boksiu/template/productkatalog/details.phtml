@@ -1,0 +1,35 @@
+
+<?php
+$Details=$this->getBunad();
+if($Details):
+?>
+<div class="main_div">
+  <div class="page-title category-title">
+    <h1><?php echo $Details->getName(); ?></h1>
+  </div>
+  <div class="category-description std"><?php echo $Details->getDescription(); ?></div>
+ <style>
+#prc span{text-decoration:line-through;}
+</style>
+  <div class="main_slider" style="float:left;">
+    <div class="thumb_nail_main_1">
+      <div class="spacer"></div>
+      <div class="thumb_nail_02" style="margin-bottom:5px;">
+        <div class="img"> <a href="<?php echo $Details->getExternalUrl(); ?>" title="<?php echo $Details->getName(); ?>" class="product-image" target="_blank"><img src="<?php echo Mage::getBaseUrl('media').''.$Details->getImage()?>"" alt="<?php echo $Details->getName(); ?>" height="auto" width="100%"></a> </div>
+        <div class="buy_div"> <span onclick="setLocation(<?php echo $Details->getExternalUrl(); ?>)"><?php echo $Details->getName(); ?><br>
+          </span> </div>
+        <div class="spacer"></div>
+      </div>
+      <div class="spacer"></div>
+    </div>
+  </div>
+  <div class="pager">
+    <div class="pages">
+      <ol>
+        <li> <a class="next i-next" href="" title="Next" islast="1" prolimit="15"> </a> </li>
+      </ol>
+    </div>
+  </div>
+  <div class="spacer"></div>
+</div>
+<?php endif; ?>

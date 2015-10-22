@@ -1,0 +1,92 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>js/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>js/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="<?php echo $this->getSkinUrl(); ?>js/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+	<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="<?php echo $this->getSkinUrl(); ?>js/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+	
+	<script type="text/javascript">
+	var fancyconf = jQuery.noConflict();
+		fancyconf(document).ready(function() {
+			
+			fancyconf('.fancybox').fancybox();
+			
+			});
+	</script>
+	
+	<style type="text/css">
+		.fancybox-custom .fancybox-skin {
+			box-shadow: 0 0 50px #222;
+		}
+
+		
+	</style>
+
+<?php if ($_product->getImage() != 'no_selection' && $_product->getImage()): ?>
+<div class="product_left_img">
+    <?php
+
+
+        $_img = '<a class= "fancybox" id="pimagefancy" href="'.$this->helper('catalog/image')->init($_product, 'image')->resize(727,727)->keepFrame(true).'"><img src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(327,327)->keepFrame(true).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" data-fancybox-group="gallery" title="'.$this->escapeHtml($this->getImageLabel()).'"  id="pimage"/></a>';
+        echo $_helper->productAttribute($_product, $_img, 'image');
+    ?>
+</div>
+
+
+<?php else: ?>
+<div class="product_left_img">
+    <?php
+        $_img = '<a class= "fancybox" href="'.$this->helper('catalog/image')->init($_product, 'image')->resize(727,727)->keepFrame(true).'"><img  src="'.$this->helper('catalog/image')->init($_product, 'image')->resize(327,327)->keepFrame(true).'" alt="'.$this->escapeHtml($this->getImageLabel()).'" data-fancybox-group="gallery" title="'.$this->escapeHtml($this->getImageLabel()).'" id="pimage"/></a>';
+        echo $_helper->productAttribute($_product, $_img, 'image');
+    ?>
+</div>
+<?php endif; ?>

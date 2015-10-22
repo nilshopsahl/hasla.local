@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Hasla_Inspiration extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Hasla
+ * @package        Hasla_Inspiration
+ * @copyright      Copyright (c) 2014
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <modules>
+        <Hasla_Inspiration>
+            <version>1.0.0</version>
+        </Hasla_Inspiration>
+    </modules>
+    <global>
+        <resources>
+            <hasla_inspiration_setup>
+                <setup>
+                    <module>Hasla_Inspiration</module>
+                    <class>Hasla_Inspiration_Model_Resource_Setup</class>
+                </setup>
+            </hasla_inspiration_setup>
+        </resources>
+        <blocks>
+            <hasla_inspiration>
+                <class>Hasla_Inspiration_Block</class>
+            </hasla_inspiration>
+        </blocks>
+        <helpers>
+            <hasla_inspiration>
+                <class>Hasla_Inspiration_Helper</class>
+            </hasla_inspiration>
+        </helpers>
+        <models>
+            <hasla_inspiration>
+                <class>Hasla_Inspiration_Model</class>
+                <resourceModel>hasla_inspiration_resource</resourceModel>
+            </hasla_inspiration>
+            <hasla_inspiration_resource>
+                <class>Hasla_Inspiration_Model_Resource</class>
+                <entities>
+                    <inspiration>
+                        <table>hasla_inspiration_inspiration</table>
+                    </inspiration>
+                    <inspiration_store>
+                        <table>hasla_inspiration_inspiration_store</table>
+                    </inspiration_store>
+                </entities>
+            </hasla_inspiration_resource>
+        </models>
+    </global>
+    <adminhtml>
+        <layout>
+            <updates>
+                <hasla_inspiration>
+                    <file>hasla_inspiration.xml</file>
+                </hasla_inspiration>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <Hasla_Inspiration>
+                    <files>
+                        <default>Hasla_Inspiration.csv</default>
+                    </files>
+                </Hasla_Inspiration>
+            </modules>
+        </translate>
+        <global_search>
+            <inspiration>
+                <class>hasla_inspiration/adminhtml_search_inspiration</class>
+                <acl>hasla_inspiration</acl>
+            </inspiration>
+        </global_search>
+    </adminhtml>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <Hasla_Inspiration before="Mage_Adminhtml">Hasla_Inspiration_Adminhtml</Hasla_Inspiration>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

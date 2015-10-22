@@ -1,0 +1,12 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+  <press_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="press/index" name="press_index" template="press/index.phtml"/>   
+    </reference>   
+  </press_index_index>   
+</layout>   
+	

@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<config>
+	<modules>
+		<Dev_Custompayment>
+			<version>1.0.0</version>	
+		</Dev_Custompayment>	
+	</modules>
+	<global>
+		<!-- declare helper class -->
+		<helpers>
+			<custompayment>
+				<class>Dev_Custompayment_Helper</class>
+			</custompayment>
+		</helpers>
+		<!-- model -->
+		<models>
+			<custompayment>
+				<class>Dev_Custompayment_Model</class>
+			</custompayment>
+		</models>
+		<blocks>
+			<custompayment>
+				<class>Dev_Custompayment_Block</class>
+			</custompayment>
+		</blocks>
+		<!-- end of model -->
+	</global>	
+	<!-- start start of declaretion of payment -->
+	<!-- declare default configuration values for this module -->
+	<default>
+	<!-- 'payment' configuration section (tab) -->
+		<payment>
+	<!-- 'newmodule' configuration group (fieldset) -->
+			<custompayment>
+	<!-- by default this payment method is inactive -->
+				<active>0</active>
+	<!-- model to handle logic for this payment method -->			
+				<model>custompayment/strandard</model>
+				<!-- order status for new orders paid by this payment method -->
+				<order_status>pending</order_status>
+				<!-- set payment title to -->
+				<title>Custom Payment</title>
+                <allowspecific>0</allowspecific>
+                <group>offline</group>
+
+			</custompayment>		
+		</payment>
+	</default>
+	<!-- event of not show custom payment method -->
+  <frontend>
+        <events>
+            <payment_method_is_active>
+                <observers>
+                    <paymentfilter_payment_method_is_active>
+                        <type>singleton</type>
+                        <class>custompayment/observer</class>
+                        <method>filterpaymentmethod</method>
+                    </paymentfilter_payment_method_is_active>
+                </observers>
+            </payment_method_is_active>
+        </events>
+    </frontend>
+</config> 

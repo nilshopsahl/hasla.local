@@ -1,0 +1,23 @@
+
+
+<?php 
+	$retailers = $this->getRetailers();
+	$areas = $this->getAreas();
+?>
+<div class="main_slider">
+<div class="retailers">
+	<ul class="retl" style="padding:0">
+		<?php foreach($areas as $area_data):?>
+		<li class="retl-li">
+		 <h3 style="font-weight: normal; font-size: 18px;"><?php echo $area_data->getArea();?></h3>	
+	<ul style="padding:0">
+	<?php foreach($retailers as $rtl_data):?>
+		<?php if($rtl_data->getArea()==$area_data->getArea()):?>
+		<li style="font-size:13px"><?php echo $rtl_data->getSubarea().' - '.$rtl_data->getName().', '.$rtl_data->getContact();?></li>
+		<?php endif;?>
+	<?php endforeach;?>
+	</ul>
+	    </li>
+	    <?php endforeach;?>
+	</ul>
+</div> </div>

@@ -1,0 +1,101 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2013 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Product media data template
+ *
+ * @see Mage_Catalog_Block_Product_View_Media
+ */
+?>
+<?php
+    $_product = $this->getProduct();
+    $_helper = $this->helper('catalog/output');
+?>
+
+<?php if (count($this->getGalleryImages()) > 0): ?>
+
+
+<div class="related_product_div2" style="float:left;">
+   
+    <div class="related_img_main">
+    <?php $i=0; foreach ($this->getGalleryImages() as $_image): if($this->escapeHtml($_image->getLabel()) != "models") continue; ?>
+	<script type="text/javascript">
+	function imageReplace<?php echo $i;?>(newimageURL){
+	var noconimage = jQuery.noConflict();
+	var bigimage = noconimage('#imagesallmore<?php echo $i;?>').attr('mydataimageurl');
+	
+	noconimage('#pimage').attr('src', newimageURL);
+	noconimage('#pimagefancy').attr('href', bigimage);
+	noconimage("#pimage").fadeOut();
+	noconimage("#pimage").delay(200).fadeIn();
+		/*document.getElementById("pimage").setAttribute('src', newimageURL);*/
+		document.getElementById("pimage").style.width = '100%';
+	}
+	</script>
+        <div class="related_01" style="width: auto;height: auto;">
+		  <?php
+		  /*
+		  <a id="imagesallmore<?php echo $i;?>"  onclick="imageReplace<?php echo $i;?>('<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(375)->keepFrame(true); ?>')" title="<?php echo $this->htmlEscape($_image->getLabel()) ?>" mydataimageurl="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(727)->keepFrame(true); ?>">
+                <img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(42); ?>" width="42" height="42" alt="<?php echo $this->htmlEscape($_image->getLabel()) ?>" />
+	        </a>
+			*/			
+			?>
+			<a class="fancybox" href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(527)->keepFrame(true); ?>" data-fancybox-group="models" title="<?php echo $this->escapeHtml($_image->getLabel()) ?>">
+			<img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(42)->keepFrame(true); ?>" width="42" height="42" />
+			</a>
+
+        </div>
+		<?php $i++; ?>
+    <?php endforeach; ?>
+    </div>
+</div>
+
+<!----START ALSO AVAILABLE IN IMAGES---->
+<div class="related_product_div2" style="float:left;">
+<?php 
+$count=0; 
+foreach ($this->getGalleryImages() as $_image): 
+	if($this->escapeHtml($_image->getLabel()) == "models") continue;
+	$count++;
+	if($count>0): break; endif;
+?>
+<?php endforeach; ?>
+<?php if ($count > 0): ?>
+    <h1 style="margin-bottom: 8px;"><?php echo $this->__('ALSO AVAILABLE IN') ?></h1>
+    <div class="related_img_main">
+    <?php $i=0; foreach ($this->getGalleryImages() as $_image): if($this->escapeHtml($_image->getLabel()) == "models") continue;?>
+	<div class="related_01">
+		     <a class="fancybox" href="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(527)->keepFrame(true); ?>" data-fancybox-group="gallery" title="<?php echo $this->escapeHtml($_image->getLabel()) ?>">
+			<img src="<?php echo $this->helper('catalog/image')->init($this->getProduct(), 'thumbnail', $_image->getFile())->resize(75)->keepFrame(true); ?>" width="75" height="75" alt="<?php echo $this->escapeHtml($_image->getLabel()) ?>" />
+			</a>
+        </div>
+		<?php $i++; ?>
+    <?php endforeach; ?>
+    </div>
+<?php endif; ?>	
+</div>
+<!-------END ALSO AVAILABLE IN IMAGES------->
+<?php endif; ?>

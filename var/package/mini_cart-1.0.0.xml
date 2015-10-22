@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>mini_cart</name>
+    <version>1.0.0</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">OSL v3.0</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>Mini Cart Header</summary>
+    <description>Mini Cart Header</description>
+    <notes>Mini Cart Header</notes>
+    <authors><author><name>Hire Magento Inc.</name><user>hiremagento</user><email>hiremagento@gmail.com</email></author></authors>
+    <date>2013-08-30</date>
+    <time>19:18:32</time>
+    <contents><target name="magecommunity"><dir name="HM"><dir name="Minicart"><dir name="Block"><file name="View.php" hash="03fcb421f8be7b918e6437ff15245678"/></dir><dir name="etc"><file name="config.xml" hash="9e88b8846e902b81e148581120f31617"/></dir></dir></dir></target><target name="magedesign"><dir name="frontend"><dir name="base"><dir name="default"><dir name="layout"><file name="minicart.xml" hash="0f3f33d1a70ec5ed010505f165e0ab19"/></dir><dir name="template"><dir name="minicart"><file name="link.phtml" hash="39bd241186dc3e85427895254a1885a9"/><file name="toplink.phtml" hash="eb54895588f4c8f77e95ff2082f8dd1c"/></dir></dir></dir></dir></dir></target><target name="mageskin"><dir name="frontend"><dir name="base"><dir name="default"><dir name="css"><dir name="hm"><file name="minicart.css" hash="082d8443b087fee585b94c678203dc55"/></dir></dir><dir name="js"><dir name="hm"><file name="minicart.js" hash="9e17a95107ab7c1acaf308f91d3dc41c"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="HM_Minicart.xml" hash="4270485623d1e3d187f6f57706d5999d"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php><package><name>Mage_Core_Modules</name><channel>community</channel><min>1.4</min><max>1.7</max></package><extension><name>gd</name><min>2.0.28</min><max>3.0</max></extension></required></dependencies>
+</package>

@@ -1,0 +1,50 @@
+<?php
+ 	$category = $this->getCategories();
+ 	$shopbycat = explode(",",Mage::getModel("catalog/category")->load(7)->getChildren());
+	$shopbycat[] = 7;	
+	$shopbycat[] = 2;
+	$shopbycat[] = 22;
+	$bunad =explode(",", Mage::getModel('catalog/category')->load(23)->getChildren());
+	$bunad[] = 23;
+	$katalog =explode(",", Mage::getModel('catalog/category')->load(37)->getChildren());
+	$katalog[] = 37;
+	//print_r($bunad);
+?>
+<div class="main_slider">
+    <div class="product_list_left">
+      	<div class="spacer"></div>
+          <ul style="text-transform:uppercase;"> 
+			<?php foreach ($category as $data): ?>
+				<?php if(!in_array($data->getId(),$shopbycat) && !in_array($data->getId(),$bunad) && !in_array($data->getId(),$katalog) && $data->getId()>2):?>
+					<?php $catg = Mage::getModel('catalog/category')->load($data->getId());?>
+							<li><a href="<?php echo $catg->getUrl();?>"><?php echo $catg->getName();?></a></li>
+				<?php endif;?>
+			<?php endforeach;?>
+          </ul>
+       <div class="spacer"></div>
+    </div>
+    <div class="thumb_nail_main_1">
+    	<?php foreach ($category as $data): ?>
+			<?php if(!in_array($data->getId(),$shopbycat) && !in_array($data->getId(),$bunad) && !in_array($data->getId(),$katalog) && $data->getId()>2):?>
+			 <?php $catg = Mage::getModel('catalog/category')->load($data->getId());?>
+              <div class="thumb_nail_02">
+              <a href="<?php echo $catg->getUrl()?>"><div class="img"><img width="100%" height="auto" src="<?php echo Mage::getBaseUrl('media').'catalog/category/'.$catg->getThumbnail()?>" style="height:160px;" alt="" /></div></a>
+                   <div class="buy_div">
+                       <span><?php echo $catg->getName();?></span>
+                   </div>
+             </div>
+             
+           	<?php endif;?>
+		 <?php endforeach;?>   
+         <div class="spacer"></div>
+                    <div class="spacer"></div>
+                    <div class="category_text_div">
+					
+					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('shopcategorybottom')->toHtml(); ?> 
+                    	
+                    	<div class="spacer"></div>
+                    </div>
+                    <div class="spacer"></div>
+                </div>
+                <div class="spacer"></div>
+            </div>

@@ -1,0 +1,43 @@
+<div class="thumb_nail_main">
+	<h1><?php echo $this->__('Our recommendations') ?>:</h1>
+	<div class="spacer"></div>
+	<?php $productCollection = Mage::getModel("catalog/product")->getCollection()->addAttributeToFilter("inchoo_featured_product","1");?>
+	
+	<?php foreach($productCollection as $product): ?>
+	<?php $_product = Mage::getModel("catalog/product")->load($product->getId());?>
+		<?php
+		$product1 = Mage::getModel('catalog/product')->load($product->getEntityId());
+		$product1->getFullProductUrl($product1); 
+		
+		?>
+	<div class="thumb_nail_01" style="background-image: none; background-color: #fff;">
+		<div class="thumb_img">
+			<img  onclick="window.location.href='<?php echo $product1->getFullProductUrl($product1); ?>'" width="100%" height="100%" src="<?php echo Mage::helper('catalog/image')->init($_product, 'thumbnail')->resize(160)->keepFrame(true); ?>" />
+		</div>
+		<div class="buy_div">
+	
+			<span onclick="window.location.href='<?php echo $_product->getProductUrl()?>'"><?php echo $_product->getName() ?> <br />
+			<?php Mage::helper('bunad')->showPrice($_product);
+			/*if($this->htmlEscape($_product->getSpecialPrice()))
+			{
+				echo "<strike>".$currency_symbol.' '.number_format(Mage::helper('tax')->getPrice($_product, $_product->getPrice()),0).',-'.'</strike><br />';
+				echo $currency_symbol.' '.number_format(Mage::helper('tax')->getPrice($_product, $_product->getSpecialPrice()),0).',-';
+			}	
+			else
+			{
+				if(Mage::app()->getStore()->getCode()=='us'){
+										echo $euroPrice = Mage::helper('core')->currency(Mage::helper('tax')->getPrice($_product, $_product->getFinalPrice()));
+										}else{
+										echo $currency_symbol.' '.number_format(Mage::helper('tax')->getPrice($_product, $_product->getFinalPrice()),0).',-';
+										}
+			}*/	
+			//echo $currency_symbol.' '.number_format(Mage::helper('tax')->getPrice($_product, $_product->getFinalPrice()),0).',-';?></span>
+			<!--<a href='<?php echo $_product->getProductUrl()?>'>Buy</a>-->
+			<?php /*<a href="javascript:void(0);" onclick="setLocation('<?php echo $this->getLayout()->createBlock('catalog/product_list')->getAddToCartUrl($_product);?>')">*/ ?>
+		</div>
+		<div class="spacer"></div>
+	</div>
+	
+	<?php endforeach;?>
+	<div class="spacer"></div>
+</div>

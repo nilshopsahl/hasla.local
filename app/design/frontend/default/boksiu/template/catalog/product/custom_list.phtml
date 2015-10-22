@@ -1,0 +1,221 @@
+<style>
+#prc span{text-decoration:line-through;}
+</style>
+<?php
+    $_productCollection=$this->_getProductCollection(); //getLoadedProductCollection
+    $_helper = $this->helper('catalog/output');
+	$currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
+	$currency_symbol = Mage::app()->getLocale()->currency( $currency_code )->getSymbol();
+	$curr_category = Mage::registry('current_category');	
+	$shopbycat = explode(",",Mage::getModel("catalog/category")->load(7)->getChildren());	
+	$shopbycat[] = 7;	
+	$shopbycat[] = 2; 
+	$shopbycat[] = 22;
+	//$shopbycat[] = 37;
+	$bunad = explode(",",Mage::getModel("catalog/category")->load(23)->getChildren());
+	$bunad[] = 23;
+	$katalog = explode(",",Mage::getModel("catalog/category")->load(37)->getChildren());
+	$katalog[] = 37;
+?>
+<div class="main_slider" style="float:left;">
+                <div class="product_list_left"> <!--Left side category image-->
+                    <?php $catg_coll = Mage::getModel('catalog/category')->load(7)->getChildrenCategories();?>
+                    <?php if(!in_array($curr_category->getId(),$bunad) AND !in_array($curr_category->getId(),$katalog)):?>
+                    <div class="thumb_nail_01">
+                        <div class="img"><img width="100%" height="auto" src="<?php echo Mage::getBaseUrl('media').'catalog/category/'.$curr_category->getData('thumbnail')?>" style="height: 160px;" /></div>
+                        <div class="spacer"></div>
+                    </div>
+                    <?php endif;?>					
+					
+					<div class="spacer"></div>
+					
+					<?php  $curr_category->getId();
+						   $curr_category->getParentId(); 
+					?>
+                    <ul <?php if($curr_category->getParentId()!='7' && $curr_category->getId()!='7'){ ?>
+					style="text-transform:uppercase;" <?php } ?>>
+                    	<?php 
+                    		 
+                    		   if(in_array($curr_category->getId(),$shopbycat)):	//all categories defined in array						
+									foreach($catg_coll as $catg_data):
+									if(in_array($catg_data->getId(),$shopbycat) && $catg_data->getId()>2):	//all categories above ROOT default directory
+										$catg_data = Mage::getModel('catalog/category')->load($catg_data->getId());
+										if($catg_data->getName() != 'Shop By Collection' && $catg_data->getName() != 'Kolleksjon'){
+								?>
+									<li>
+									
+									<a id="<?php if($catg_data->getId()==$curr_category->getData('entity_id')):?>left_product_active<?php endif;?>" href="<?php echo $catg_data->getUrl();?>"><?php echo $catg_data->getName();?></a>
+									
+									</li>
+									<?php } ?>
+									<?endif;?>
+									
+								<?php endforeach;?>							
+								
+								<?php elseif(in_array($curr_category->getId(),$bunad)):    //BUNAD list
+									$bunad_page = true;   //to apply target_blank on URLs
+							 	  foreach($catg_coll as $catg_data):
+									if(in_array($catg_data->getId(),$bunad) && $catg_data->getId()>2 && $catg_data->getId()!=23):	//all child, no default, no bunad itself
+										$catg_data = Mage::getModel('catalog/category')->load($catg_data->getId());
+								?>
+									<li><a id="<?php if($catg_data->getId()==$curr_category->getData('entity_id')):?>left_product_active<?php endif;?>" href="<?php echo $catg_data->getUrl();?>"><?php echo $catg_data->getName();?></a></li>
+									<?endif;?>
+									
+								<?php endforeach;?>
+								
+								<?php elseif(in_array($curr_category->getId(),$katalog)):   //KAtalog list
+							 	  foreach($catg_coll as $catg_data):
+									if(in_array($catg_data->getId(),$katalog) && $catg_data->getId()>2 && $catg_data->getId()!=37):	
+										$catg_data = Mage::getModel('catalog/category')->load($catg_data->getId());
+								?>
+									<li><a id="<?php if($catg_data->getId()==$curr_category->getData('entity_id')):?>left_product_active<?php endif;?>" href="<?php echo $catg_data->getUrl();?>"><?php echo $catg_data->getName();?></a></li>
+									<?endif;?>
+									
+								<?php endforeach;?>
+								
+								<?php else: foreach($catg_coll as $catg_data):	  //category
+								       if((!in_array($catg_data->getId(),$shopbycat)) && (!in_array($catg_data->getId(),$bunad)) && (!in_array($catg_data->getId(),$katalog)) && ($catg_data->getId()>2)):			
+										 	$catg_data = Mage::getModel('catalog/category')->load($catg_data->getId());								
+								?>		
+								<li>
+									<a id="<?php if($catg_data->getId()==$curr_category->getData('entity_id')):?>left_product_active<?php endif;?>" href="<?php echo $catg_data->getUrl();?>"><?php echo $catg_data->getName();?></a>
+								</li>
+								<?php endif;?>
+								<?php endforeach;?>
+								<?php endif;?>
+                    </ul>
+                    <div class="spacer"></div>
+                </div>
+				
+                <div class="thumb_nail_main_1">
+				<?php //echo $this->getToolbarHtml(); ?>
+                    <div class="spacer"></div>
+			    <?php  $realtotalpro = count($_productCollection); ?>
+               	<?php foreach ($_productCollection as $_product): 
+               			if($_product->getProductLink()){
+               				$product_url = $_product->getProductLink(); //external link
+               			}	
+						else{
+							$product_url = $_product->getProductUrl();
+						}
+               	?>
+                    <div class="thumb_nail_02" style="margin-bottom:5px;">
+                        <div class="img">
+                        	<a href="<?php echo $product_url ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image" <?php if($bunad_page) print "target='_blank'"; ?> ><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" width="100%" height="auto" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+                        </div>
+                        <div class="buy_div">
+                            <span onclick="setLocation('<?php echo $product_url ?>')">
+                            	<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?><br />
+                				<?php $catg_coll = Mage::getModel('catalog/category')->getCollection();?>
+                    				<?php if(!in_array($curr_category->getId(),$bunad)):?>
+                						 
+									<?php echo Mage::helper('bunad')->showPrice($_product);
+									/*if(Mage::app()->getStore()->getCode()=='no'){
+	if($this->htmlEscape($_product->getSpecialPrice())){
+		echo "<strike>".$currency_symbol.' '.number_format(Mage::helper('tax')->getPrice($_product, $_product->getPrice()),0).',-'.'</strike><br />';
+		echo $currency_symbol.' '.number_format(Mage::helper('tax')->getPrice($_product, $_product->getSpecialPrice()),0).',-';
+	}	
+	else
+	{	
+		echo $currency_symbol.' '.number_format(Mage::helper('tax')->getPrice($_product, $_product->getFinalPrice()),0).',-';
+	}
+	}else if (Mage::app()->getStore()->getCode()=='us'){
+	if($this->htmlEscape($_product->getSpecialPrice())){
+		echo "<span id='prc'>".Mage::helper('core')->currency(Mage::helper('tax')->getPrice($_product, $_product->getPrice())).'</span><br />';
+		echo Mage::helper('core')->currency(Mage::helper('tax')->getPrice($_product, $_product->getSpecialPrice()));
+	}
+	else
+	{	
+		echo $euroPrice = Mage::helper('core')->currency(Mage::helper('tax')->getPrice($_product, $_product->getFinalPrice()));
+	}
+	}	*/
+									//echo $currency_symbol.' '.number_format(Mage::helper('tax')->getPrice($_product, $_product->getFinalPrice()),0).',-';
+										//echo $currency_symbol.' '.$_product->getPrice().',-';
+										?>
+                				<?php endif;?>
+                			</span>
+                            <?php $catg_coll = Mage::getModel('catalog/category')->getCollection();?>
+                    			<?php 
+									/*
+									if(!in_array($curr_category->getId(),$bunad)):?>
+                            		<a class="button btn-cart" href='<?php echo $product_url ?>' >Buy</a>
+									<?php /* onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')" */ ?>
+                            <?php 	//endif; //comment ends here									
+							?>
+                        </div>
+                        <div class="spacer"></div>
+                    </div>
+             	<?php endforeach;?>       
+                    <div class="spacer"></div>					
+                </div>         
+ 				
+</div>
+
+<?php  echo $this->getToolbarHtml(); ?>
+	<?php if($_GET['limit']==false) { ?>
+	<center><button id="load-more-products" type="button" title="<?php echo $this->__('SEE MORE'); ?>" class="button"><span><span><?php echo $this->__('SEE MORE'); ?></span></span></button>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	<button id="showall" type="button" title="<?php echo $this->__('SEE ALL'); ?>" class="button" onclick="setLocation('<?php echo $currentUrl; ?>?limit=all')"><span><span><?php echo $this->__('SEE ALL'); ?></span></span></button>
+	</center>
+	
+	
+	<?php } ?>
+		<center><div id="waitloader" style="display:none" ><img src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>media/images/loader.gif" /></div></center> 
+		 
+	<script type="text/javascript">
+	
+		var prolimit = $$('.next.i-next')[0].readAttribute('prolimit'); 
+		
+				if(prolimit > <?php echo $realtotalpro; ?> ){
+			
+				document.getElementById('load-more-products').style.display='none'; 
+				document.getElementById('showall').style.display='none'; 
+				
+				}
+			
+	function sendLoadMoreProductsRequest(url) {
+		new Ajax.Request(url, {
+			onSuccess: function(response) {
+				
+				var div = document.createElement('div');
+				div.innerHTML = response.responseText;
+				
+				$$('.pages')[0].innerHTML = $(div).select('.pages')[0].innerHTML;
+			
+				$$('.thumb_nail_main_1')[0].innerHTML += $(div).select('.thumb_nail_main_1')[0].innerHTML;
+			
+				if(!$(div).select('.next.i-next')[0]){
+					$('load-more-products').style.display = "none";
+				}
+				$('waitloader').style.display = "none";
+				var islastpage =  $$('.next.i-next')[0].readAttribute('islast'); 
+				//alert(islastpage);
+				if(islastpage!='0'){
+			
+				document.getElementById('load-more-products').style.display='none';
+				}
+			}
+		});	
+	}
+
+	function callbackFunc(e) {
+	
+		if($$('.next.i-next')[0]){
+			var nextPageUrl = $$('.next.i-next')[0].readAttribute('href');
+			var islastpage =  $$('.next.i-next')[0].readAttribute('islast'); 
+			
+			$('waitloader').style.display = "block";
+			
+			sendLoadMoreProductsRequest(nextPageUrl);
+		}
+		else{
+			//hide button
+			$$(e.currentTarget).hide();
+		}
+	}
+
+	//Assigning click event to the button which triggers the "next" link
+	$('load-more-products').observe('click', callbackFunc);
+
+	</script>
+<?php  unset($_SESSION['catalog']['limit_page']);  ?>	

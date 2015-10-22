@@ -1,0 +1,161 @@
+<!--<link type="text/css" href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);?>frontend/base/default/lookbook/css/layout.css" rel="stylesheet" />
+    <link type="text/css" href="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);?>frontend/base/default/lookbook/css/style1.css" rel="stylesheet" />
+    <script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);?>frontend/base/default/lookbook/js/jquery.easing.js"></script>
+    <script type="text/javascript" src="<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_SKIN);?>frontend/base/default/lookbook/js/script.js"></script>
+    -->
+	<script type="text/javascript">
+    jQuery(document).ready( function($){	
+		// buttons for next and previous item						 
+		var buttons = { previous:$('#jslidernews1 .button-previous') ,
+						next:$('#jslidernews1 .button-next') };			
+		 $('#jslidernews1').lofJSidernews( { interval       : 4000,
+                                                    direction	    : 'opacitys',	
+                                                    easing	    : 'easeInOutExpo',
+                                                    duration	    : 1200,
+                                                    auto	    : true,
+                                                    maxItemDisplay  : 4,
+                                                    navPosition     : 'horizontal', // horizontal
+                                                    navigatorHeight : 32,
+                                                    navigatorWidth  : 80,
+                                                    mainWidth	    : 980,
+                                                    buttons	    : buttons } );	
+	});
+    </script>
+
+
+
+
+
+    <?php
+    $_category = Mage::getModel('catalog/category')->loadByAttribute('url_key','lookbook'); 
+
+    $_products = $_category->getProductCollection();
+    ?>
+    <!------------------------------------- THE CONTENT ------------------------------------------------->
+    <div id="jslidernews1" class="lof-slidecontent" style="width:980px; height:570px;">
+        <div class="preload"><div></div></div>
+            <!-- MAIN CONTENT --> 
+            <div class="main-slider-content" style="width:980px; height:570px;">
+                <ul class="sliders-wrap-inner">                
+                    <?php
+                    
+                    foreach($_products as $product):
+						
+                        $product_details = Mage::getModel('catalog/product')->load($product->getId()); 
+                        
+						if($product_details->getStatus()=="1"){
+                        
+                    ?>
+                    <li>
+                        <form action="<?php echo Mage::helper('checkout/cart')->getAddUrl($product_details); ?>" method="post" id="product_addtocart_form_<?php echo $product_details->getId()?>">
+                        <img src="<?php echo Mage::helper('catalog/image')->init($product_details, 'image')->resize(980, 340); ?>" title="Newsflash 2" >           
+                        <div class="slider-description">
+                            <div class="slider-meta">
+								<a target="_parent" title="<?php echo $product_details->getName()?>" href="<?php echo $product_details->getProductUrl();?>"><?php echo $product_details->getName()?></a>
+							
+							</div>
+                            <?php
+    
+                            $optionCollection = $product_details->getTypeInstance()->getOptionsCollection();
+                            $selectionCollection = $product_details->getTypeInstance()->getSelectionsCollection($product_details->getTypeInstance()->getOptionsIds());
+                            $options = $optionCollection->appendSelections($selectionCollection);
+                           
+                            $bundle_items = array();
+                            foreach( $options as $option )
+                            {
+                                
+                                $_selections = $option->getSelections();
+                                foreach( $_selections as $selection )
+                                {
+                                    if($selection->getStatus()=="1"){
+                                        if((int)Mage::getModel('cataloginventory/stock_item')->loadByProduct($selection)->getQty()>0)                                      
+                                        $bundle_items[] =  $selection;
+                                    }                                    
+                                }   
+                            }
+                            $block = Mage::getSingleton('core/layout')->createBlock('bundle/catalog_product_view_type_bundle');
+                            $options = $block->setProduct($product_details)->getOptions();                   
+                                                        
+                           
+                            ?>
+                            <h4> <?php echo count($bundle_items) ?> ITEMS IN THIS LOOK</h4>                            
+                            <span>
+                                
+                                <?php $price = 0; ?>
+                                <?php foreach($bundle_items as $item):                               
+                                
+                                ?>
+                                <div style="float: left; margin: 5px; text-align: center !important;">
+                                <a href="<?php echo $item->getProductUrl()?>" target="_blank" style=" text-decoration: none;" >     
+                                    <img src=" <?php echo $this->helper('catalog/image')->init($item, 'thumbnail')->resize(50, 50); ?> "/>
+                                    <p style="margin: 0 0 0 0 !important;"> <?php echo $item->getName() ?></p>
+                                    <p> <?php echo  Mage::helper('core')->currency($item->getPrice());?></p>
+                                    <?php $price += $item->getPrice();?>
+                                </a>
+                                </div>
+                                <?php endforeach;?>
+                               
+                                
+                                 <div style="float: left; margin: 5px; text-align: center !important;"><!--$product_details->getPrice()-->
+                                    <span><h4> Total: <?php echo $this->getDisplayPrice($product_details,$price);?></h4></span>      
+                                    <!--<a href="<?php echo Mage::helper('checkout/cart')->getAddUrl($product_details);?>" style="text-decoration: none; padding: 5px; background: #C01F25;"> BUY THIS LOOK </a>
+                                    -->
+                                    <button type="button" onclick="this.form.submit()" style="text-decoration: none; padding: 5px; "> BUY THIS LOOK </button>
+                               
+                                </div>
+                                <?php $selectionCollection = $product_details->getTypeInstance(true)->getSelectionsCollection(
+                                        $product_details->getTypeInstance(true)->getOptionsIds($product_details), $product_details
+                                    ); ?>
+                            
+                                <?php $saleable = true; ?>
+                                <?php foreach($selectionCollection as $option) : ?>
+                                    <input type="hidden" name="bundle_option[<?php echo $option->option_id; ?>][]" value="<?php echo $option->selection_id; ?>" />
+                                    <input type="hidden" name="bundle_option_qty[<?php echo $option->option_id; ?>][]" value="1" />
+                                    <?php
+                                        //Stock control for each bundle option
+                                        $opt_product = Mage::getModel('catalog/product')->load($option->product_id); 
+                                        $stocklevel = (int)Mage::getModel('cataloginventory/stock_item')
+                                                        ->loadByProduct($opt_product)->getQty();
+                                        if($stocklevel<=0) 
+                                            $saleable = false;                          
+                                     ?>
+                                <?php endforeach; ?>
+                                
+                                <input type="hidden" name="qty"  value="1" />
+                                <input type="hidden" name="product" value="<?php echo $product_details->getId()?>"/>
+                                <input type="hidden" name="related_product" id="related-products-field" value="" />
+                                
+                            </span>
+                        </div>
+                        </form>
+                    </li>
+                    
+                    <?php }                    
+                    endforeach;
+                    ?>
+                </ul>  	
+            </div>
+                   <!-- END MAIN CONTENT --> 
+           <!-- NAVIGATOR -->
+            <div class="navigator-content">
+                <div class="button-next">Next</div>
+                <div class="navigator-wrapper">
+                    <ul class="navigator-wrap-inner">
+                        <?php foreach($_products as $product):
+                        $product_thumb = Mage::getModel('catalog/product')->load($product->getId());
+                        if($product_thumb->getStatus()=="1"){
+                        ?>  
+                        <li><img src="<?php echo $this->helper('catalog/image')->init($product_thumb, 'thumbnail')->resize(70, 25); ?>" /></li>
+                        <?php }
+                        endforeach;?>                
+                    </ul>
+                </div>
+                <div  class="button-previous">Previous</div>
+            </div> 
+        <!----------------- END OF NAVIGATOR --------------------->
+        <!-- BUTTON PLAY-STOP -->
+        <div class="button-control"><span></span></div>
+        <!-- END OF BUTTON PLAY-STOP -->              
+    </div> 
+
+

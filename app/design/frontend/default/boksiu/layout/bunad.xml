@@ -1,0 +1,34 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+  <bunad_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+	
+<!--      <block type="bunad/index" name="bunad_index" template="bunad/index.phtml"/> 
+-->	   
+      <block type="bunad/view" name="bunad_list" template="bunad/view.phtml"/>   
+    </reference>   
+  </bunad_index_index>
+    <bunad_view_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="bunad/view" name="bunad_list" template="bunad/view.phtml"/>   
+    </reference>   
+  </bunad_view_index>  
+      <bunad_view_details>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    <reference name="content">   
+      <block type="bunad/details" name="bunad_view" template="bunad/details.phtml"/>   
+    </reference>   
+  </bunad_view_details>   
+ 
+
+     
+</layout>   
+	

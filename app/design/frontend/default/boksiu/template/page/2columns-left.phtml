@@ -1,0 +1,112 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * Template for Mage_Page_Block_Html
+ */
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<?php echo $this->getLang() ?>" lang="<?php echo $this->getLang() ?>">
+<head>
+<?php echo $this->getChildHtml('head') ?>
+</head>
+<body<?php echo $this->getBodyClass()?' class="'.$this->getBodyClass().'"':'' ?>>
+<?php echo $this->getChildHtml('after_body_start') ?>
+<div class="wrapper">
+    <?php echo $this->getChildHtml('global_notices') ?>
+    <div class="page">
+        <?php echo $this->getChildHtml('header') ?>
+        <div class="main-container col2-left-layout">
+            <div class="main">
+                <?php echo $this->getChildHtml('breadcrumbs') ?>
+			
+                <div class="col-main">
+				
+					<?php  $currentPagetype = Mage::app()->getFrontController()->getAction()->getFullActionName(); 
+					 if(stristr($currentPagetype,"customer_account")==true || stristr($currentPagetype,"customer_address_form")==true || stristr($currentPagetype,"sales_order_history")==true || stristr($currentPagetype,"review_customer_index")==true  || stristr($currentPagetype,"wishlist_index_index")==true ){ 
+					 
+						$currentUrl = Mage::helper('core/url')->getCurrentUrl();
+						
+					 ?> 
+					 
+		<div class="main_slider1">
+			<div class="product_main_res">
+                	<div class="produc_with_div">
+                    	<div class="collection_button" style="margin-top:24px;">
+                        <?php
+						if(Mage::app()->getStore()->getStoreId()==2)
+						{
+						?>
+							<img width="104" height="14" id="shop_collection_opner" src="<?php echo $this->getBaseUrl(); ?>skin/frontend/default/boksiu/images/my-accont-btn_no.png"></div>
+						<?php
+						}
+						else
+						{
+						?>
+						<img width="104" height="14" id="shop_collection_opner" src="<?php echo $this->getBaseUrl(); ?>skin/frontend/default/boksiu/images/my-accont-btn.png"></div>
+						<?php
+						}
+						?>
+                        <div class="collcetion_img"></div>
+                    </div>
+                    <div style="display: none;" id="shop_by_collection" class="scrl_menu1">
+													
+							<div class="menu_02"><a href="<?php echo $this->getBaseUrl(); ?>index.php/customer/account/" <?php if(stristr($currentUrl,"customer/account")==true && stristr($currentUrl,"customer/account/edit")==false){ echo 'id="menu_active"'; } ?>><?php echo $this->__('Account Dashboard'); ?></a></div>		
+						
+													
+							<div class="menu_02"><a href="<?php echo $this->getBaseUrl(); ?>index.php/customer/account/edit/" <?php echo (stristr($currentUrl,"customer/account/edit")==true)?'id="menu_active"':'';?>><?php echo $this->__('Account Information'); ?></a></div>		
+							
+						   <div class="menu_02"><a href="<?php echo $this->getBaseUrl(); ?>index.php/customer/address/" <?php echo (stristr($currentUrl,"customer/address")==true)?'id="menu_active"':'';?>><?php echo $this->__('Address Book'); ?></a></div>
+                            
+                           <div class="menu_02"><a href="<?php echo $this->getBaseUrl(); ?>index.php/sales/order/history/" <?php echo (stristr($currentUrl,"sales/order/history")==true)?'id="menu_active"':'';?>><?php echo $this->__('My Orders'); ?></a></div>
+					
+						   <!--<div class="menu_02"><a href="<?php echo $this->getBaseUrl(); ?>index.php/review/customer/" <?php echo (stristr($currentUrl,"review/customer")==true)?'id="menu_active"':'';?>>My Product Reviews</a></div>-->
+	
+						   <div class="menu_02"><a href="<?php echo $this->getBaseUrl(); ?>index.php/wishlist/" <?php echo (stristr($currentUrl,"wishlist")==true)?'id="menu_active"':'';?>><?php echo $this->__('My Wishlist'); ?></a></div>
+						
+                           <div class="menu_02"><a href="<?php echo $this->getBaseUrl(); ?>index.php/monkey/customer_account/index/" <?php echo (stristr($currentUrl,"monkey/customer_account/index")==true)?'id="menu_active"':'';?>><?php echo $this->__('Newsletter Subscriptions'); ?></a></div>
+							
+                        
+                     </div>
+                	<div class="spacer"></div>
+                </div>
+				</div>
+				<?php } ?>
+                    <?php echo $this->getChildHtml('global_messages') ?>
+                    <?php echo $this->getChildHtml('content') ?>
+                </div>
+                <div class="col-left sidebar"><?php echo $this->getChildHtml('left') ?></div>
+            </div>
+        </div>
+        <?php echo $this->getChildHtml('footer') ?>
+        <?php echo $this->getChildHtml('global_cookie_notice') ?>
+        <?php echo $this->getChildHtml('before_body_end') ?>
+    </div>
+</div>
+<?php echo $this->getAbsoluteFooter() ?>
+</body>
+</html>

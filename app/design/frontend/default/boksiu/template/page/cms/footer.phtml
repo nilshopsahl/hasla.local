@@ -1,0 +1,48 @@
+<div class="footer_left">
+<div class="footer_logo"><img src="<?php echo Mage::getBaseUrl('skin')?>frontend/default/boksiu/images/footer_logo.png" alt="" width="96" height="23" /></div>
+<div class="footer_left_text"><?php /*<label><?php echo $this->__('VISIT OUR STORES'); ?></label> */ ?>
+<h2 style="margin-top:0px;">Hasla Valle I Setesdal</h2>
+<p>T +4737937380<br /><a href="mailto:post@hasla.no" style="font-size: 13px;color:#3b3d43;font-weight:normal;">post@hasla.no</a></p>
+<div class="spacer"></div>
+<h2 id="margin_top">Hasla, Markveien 54, Oslo</h2>
+<p>T +4792278777<br /><a href="mailto:markveien@hasla.no" style="font-size: 13px;color:#3b3d43;font-weight:normal;">markveien@hasla.no</a></p>
+<div class="spacer"></div>
+</div>
+<div class="footer_left_text"><?php /*<label><?php echo $this->__('CUSTOMER SERVICE'); ?></label> 
+<div class="spacer"></div>*/?>
+<?php $currentUrl = Mage::helper('core/url')->getCurrentUrl(); ?>
+<div> <?php /*class="margin_top" */?>
+<ul>
+<li class="margin_top"><a href="<?php echo Mage::getBaseUrl()?>contact-hasla" <?php echo (stristr($currentUrl,"contact-hasla")==true)?'id="menu_active"':'';?>><?php echo $this->__('Contact Hasla'); ?></a></li>
+<li><a href="<?php echo Mage::getBaseUrl()?>employees" <?php echo (stristr($currentUrl,"employees")==true)?'id="menu_active"':'';?>><?php echo $this->__('Employees'); ?></a></li>
+<?php /* <li><a href="<?php echo Mage::getBaseUrl()?>delivery-conditions" <?php echo (stristr($currentUrl,"delivery-conditions")==true)?'id="menu_active"':'';?>><?php echo $this->__('Delivery conditions'); ?></a></li>
+*/?>
+<li><a href="<?php echo Mage::getBaseUrl()."buying-conditions"?>" <?php echo (stristr($currentUrl,"buying-conditions")==true)?'id="menu_active"':'';?>><?php if (Mage::app()->getStore()->getCode()=='us'){echo $this->__('Terms And Conditions');}else{echo $this->__('Delivery/Buying Conditions');} ?></a></li> 
+<li><a href="<?php echo Mage::getBaseUrl()?>sizeguide" <?php echo (stristr($currentUrl,"sizeguide")==true)?'id="menu_active"':'';?>><?php echo $this->__('SIZEGUIDE'); ?></a></li>
+<li><a href="<?php echo Mage::getBaseUrl()."store-preserve"?>" <?php echo (stristr($currentUrl,"store-preserve")==true)?'id="menu_active"':'';?>><?php echo $this->__('Store and preserve'); ?></a></li>
+<?php /*<li><a href="<?php echo Mage::getBaseUrl()."retailers"?>" <?php echo (stristr($currentUrl,"retailers")==true)?'id="menu_active"':'';?>><?php echo $this->__('Retailers'); ?></a></li>*/ ?>
+<li><a href="<?php echo Mage::getBaseUrl()."opening-hours"?>" <?php echo (stristr($currentUrl,"opening-hours")==true)?'id="menu_active"':'';?>><?php echo $this->__('Opening hours'); ?></a></li>
+<?php /*<li><a href="<?php echo Mage::getBaseUrl()?>press" <?php echo (stristr($currentUrl,"press")==true)?'id="menu_active"':'';?>><?php echo $this->__('Press'); ?></a></li>*/?>
+</ul>
+</div>
+<div class="spacer"></div>
+</div>
+<div class="footer_left_text about_res"> <?php /* <?php echo $this->__('ABOUT HASLA'); ?></label> 
+<div class="spacer"></div>*/?>
+<div> <!--class="margin_top"-->
+<ul>
+<li class="margin_top"><a href="<?php echo Mage::getBaseUrl()?>about" <?php if(stristr($currentUrl,"about-environment")!=true&& stristr($currentUrl,"about")==true ){ echo 'id="menu_active"'; } ?>><?php echo $this->__('About Us'); ?></a></li>
+<li><a href="<?php echo Mage::getBaseUrl()."production"?>" <?php echo (stristr($currentUrl,"production")==true)?'id="menu_active"':'';?>><?php echo $this->__('Production'); ?></a></li>
+<?php /*
+<li><a href="<?php echo Mage::getBaseUrl()."about-environment"?>" <?php echo (stristr($currentUrl,"about-environment")==true)?'id="menu_active"':'';?>>About envirement</a></li>
+
+<li><a href="http://www.haslablogg.no/-" target="_blank">Blog</a></li>*/ ?>
+</ul>
+<div class="bunad_button"><a href="<?php echo Mage::getBaseUrl()."bunad/"?>"><?php echo $this->__('BUNAD'); ?></a></div>
+<div class="spacer"></div>
+<div class="bunad_button"><a href="<?php echo Mage::getBaseUrl()."productkatalog/"?>"><?php echo $this->__('PRODUKTKATALOG'); ?></a></div>
+</div>
+<div class="spacer"></div>
+</div>
+<div class="spacer"></div>
+</div>

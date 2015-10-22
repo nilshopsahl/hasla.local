@@ -1,0 +1,23 @@
+<?php 
+	$product_coll = Mage::getModel('catalog/product')->getCollection()
+					->addAttributeToFilter('homepage_prod','1');
+	//print_r($product_coll->getData());
+?>
+
+<div class="product_detail_main">
+	<?php $i=0;foreach($product_coll as $prod): 
+		$data = Mage::getModel('catalog/product')->load($prod->getEntityId());
+		//exit(print_r($data->getData()));			
+	?>
+                	<div class="left_div <?php if($i=='1'):?>margin_left_10<?php endif;?>">
+                    	<div class="dtl_img"><a href="<?php echo Mage::getBaseUrl().$data->getData('url_path')?>"><img height="auto" width="100%" src="<?php echo Mage::getBaseUrl('media').'catalog/product/'.$data->getData('small_image')?>"></a></div>
+                        <div class="dtls_right_text">
+                        	<h1><a href="<?php echo Mage::getBaseUrl().$data->getData('url_path')?>"><?php echo $data->getData('name');?></a></h1>
+                            <p><?php echo $data->getData('short_description');?></p>
+                            <a href="<?php echo Mage::getBaseUrl().$data->getData('url_path')?>">> Se mer her</a>
+                        </div>
+                    </div>
+    <?php $i++;endforeach;?>
+    <div class="spacer"></div>
+</div>
+<div class="spacer"></div>

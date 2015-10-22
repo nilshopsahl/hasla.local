@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Hasla_Partnerlogin>
+      <version>1.0.0</version>
+    </Hasla_Partnerlogin>
+  </modules>
+	<!-- rewrite Account controller -->
+  <frontend>
+	<routers>
+		<customer>
+			<args>
+				<modules>
+					<rewriteaccount before="Mage_Customer">Hasla_Partnerlogin_Customer</rewriteaccount>
+				</modules>
+			</args>
+		</customer>
+	</routers>  
+  </frontend>
+  <global>
+  	<blocks>
+	  <partnerlogin>
+		<class>Hasla_Partnerlogin_Block</class>
+	  </partnerlogin>
+			<customer>
+				<rewrite>
+					<form_partnerlogin>Hasla_Partnerlogin_Block_Customer_Form_Partnerlogin</form_partnerlogin>
+				</rewrite>
+			</customer>
+	</blocks>
+  </global>
+</config> 

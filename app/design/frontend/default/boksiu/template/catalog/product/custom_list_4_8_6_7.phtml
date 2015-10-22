@@ -1,0 +1,96 @@
+<?php
+    $_productCollection=$this->getLoadedProductCollection();
+    $_helper = $this->helper('catalog/output');
+	$currency_code = Mage::app()->getStore()->getCurrentCurrencyCode();
+	$currency_symbol = Mage::app()->getLocale()->currency( $currency_code )->getSymbol();
+	$curr_category = Mage::registry('current_category');	
+	$shopbycat = explode(",",Mage::getModel("catalog/category")->load(7)->getChildren());	
+	$shopbycat[] = 7;	
+	$shopbycat[] = 2; 
+	$shopbycat[] = 22;
+	$bunad = explode(",",Mage::getModel("catalog/category")->load(23)->getChildren());
+	$bunad[] = 23;
+?>
+<div class="main_slider">
+                <div class="product_list_left">
+                    <?php $catg_coll = Mage::getModel('catalog/category')->getCollection();?>
+                    <?php if(!in_array($curr_category->getId(),$bunad)):?>
+                    <div class="thumb_nail_01">
+                        <div class="img"><img width="100%" height="auto" src="<?php echo Mage::getBaseUrl('media').'catalog/category/'.$curr_category->getData('thumbnail')?>" /></div>
+                        <div class="spacer"></div>
+                    </div>
+                    <?php endif;?>
+                    <div class="spacer"></div>
+                    <ul>
+                    	<?php 
+                    		 
+                    		   if(in_array($curr_category->getId(),$shopbycat)):							
+									foreach($catg_coll as $catg_data):
+									if(in_array($catg_data->getId(),$shopbycat) && $catg_data->getId()>2):	
+										$catg_data = Mage::getModel('catalog/category')->load($catg_data->getId());
+										if($catg_data->getName() != 'Shop By Collection'){
+								?>
+									<li>
+									
+									<a id="<?php if($catg_data->getId()==$curr_category->getData('entity_id')):?>left_product_active<?php endif;?>" href="<?php echo $catg_data->getUrl();?>"><?php echo $catg_data->getName();?></a>
+									
+									</li>
+									<?php } ?>
+									<?endif;?>
+									
+								<?php endforeach;?>							
+								<?php elseif(in_array($curr_category->getId(),$bunad)):
+							 	  foreach($catg_coll as $catg_data):
+									if(in_array($catg_data->getId(),$bunad) && $catg_data->getId()>2 && $catg_data->getId()!=23):	
+										$catg_data = Mage::getModel('catalog/category')->load($catg_data->getId());
+								?>
+									<li><a id="<?php if($catg_data->getId()==$curr_category->getData('entity_id')):?>left_product_active<?php endif;?>" href="<?php echo $catg_data->getUrl();?>"><?php echo $catg_data->getName();?></a></li>
+									<?endif;?>
+									
+								<?php endforeach;?>
+								<?php else: foreach($catg_coll as $catg_data):	
+								       if(!in_array($catg_data->getId(),$shopbycat) && !in_array($catg_data->getId(),$bunad) && $catg_data->getId()>2):			
+										 	$catg_data = Mage::getModel('catalog/category')->load($catg_data->getId());								
+								?>		
+								<li>
+									<a id="<?php if($catg_data->getId()==$curr_category->getData('entity_id')):?>left_product_active<?php endif;?>" href="<?php echo $catg_data->getUrl();?>"><?php echo $catg_data->getName();?></a>
+								</li>
+								<?php endif;?>
+								<?php endforeach;?>
+								<?php endif;?>
+                    </ul>
+                    <div class="spacer"></div>
+                </div>
+                <div class="thumb_nail_main_1 ">
+                    <div class="spacer"></div>
+               	<?php foreach ($_productCollection as $_product): 
+               			if($_product->getProductLink()){
+               				$product_url = $_product->getProductLink();
+               			}	
+						else{
+							$product_url = $_product->getProductUrl();
+						}
+               	?>
+                    <div class="thumb_nail_02">
+                        <div class="img">
+                        	<a href="<?php echo $product_url ?>" title="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" class="product-image"><img src="<?php echo $this->helper('catalog/image')->init($_product, 'small_image')->resize(135); ?>" width="100%" height="auto" alt="<?php echo $this->stripTags($this->getImageLabel($_product, 'small_image'), null, true) ?>" /></a>
+                        </div>
+                        <div class="buy_div">
+                            <span onclick="setLocation('<?php echo $product_url ?>')">
+                            	<?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?><br />
+                				<?php $catg_coll = Mage::getModel('catalog/category')->getCollection();?>
+                    				<?php if(!in_array($curr_category->getId(),$bunad)):?>
+                						<?php echo $currency_symbol.' '.$_product->getPrice();?>
+                				<?php endif;?>
+                			</span>
+                            <?php $catg_coll = Mage::getModel('catalog/category')->getCollection();?>
+                    			<?php if(!in_array($curr_category->getId(),$bunad)):?>
+                            		<a class="button btn-cart" onclick="setLocation('<?php echo $this->getAddToCartUrl($_product) ?>')">Buy</a>
+                            <?php endif;?>
+                        </div>
+                        <div class="spacer"></div>
+                    </div>
+             	<?php endforeach;?>       
+                    <div class="spacer"></div>
+                </div>                
+</div>

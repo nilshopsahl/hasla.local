@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <bunadlist_adminhtml_bunadlistbackend_index>
+	<reference name="content">
+	  <block type="bunadlist/adminhtml_bunadlistbackend" name="bunadlistbackend" template="bunadlist/bunadlistbackend.phtml"/>
+	</reference>
+  </bunadlist_adminhtml_bunadlistbackend_index>
+  <bunadlist_adminhtml_bunadlist_index>
+	<reference name="content">
+	  <block type="bunadlist/adminhtml_bunadlist" name="bunadlist" />
+	</reference>
+  </bunadlist_adminhtml_bunadlist_index>
+</layout>

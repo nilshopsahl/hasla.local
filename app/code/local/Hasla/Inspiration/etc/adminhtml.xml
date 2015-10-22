@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Hasla_Inspiration extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Hasla
+ * @package        Hasla_Inspiration
+ * @copyright      Copyright (c) 2014
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+-->
+<config>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <system>
+                        <children>
+                            <config>
+                                <children>
+                                    <hasla_inspiration translate="title" module="hasla_inspiration">
+                                        <title>Inspiration</title>
+                                    </hasla_inspiration>
+                                </children>
+                            </config>
+                        </children>
+                    </system>
+                    <cms>
+                        <children>
+                            <hasla_inspiration translate="title" module="hasla_inspiration">
+                                <title>Inspiration</title>
+                                <children>
+                                    <inspiration translate="title" module="hasla_inspiration">
+                                        <title>Inspiration</title>
+                                        <sort_order>0</sort_order>
+                                    </inspiration>
+                                </children>
+                            </hasla_inspiration>                        </children>
+                    </cms>
+
+                </children>
+            </admin>
+        </resources>
+    </acl>
+    <menu>
+        <cms>
+            <children>
+                <hasla_inspiration translate="title" module="hasla_inspiration">
+                    <title>Inspiration</title>
+                    <sort_order>0</sort_order>
+                    <children>
+                        <inspiration translate="title" module="hasla_inspiration">
+                            <title>Manage Inspiration</title>
+                            <action>adminhtml/inspiration_inspiration</action>
+                            <sort_order>0</sort_order>
+                        </inspiration>
+                    </children>
+                </hasla_inspiration>            </children>
+        </cms>
+
+    </menu>
+</config>

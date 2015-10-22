@@ -1,0 +1,22 @@
+<div class="main_slider">
+<?php
+  $press = $this->getPress();
+  //print_r($employee->getData());
+  $storeid=Mage::app()->getStore()->getStoreId();
+?>
+<?php foreach($press as $data):?>
+	<?php if($data->getStatus()=='0'):?>
+		<div class="thumb_nail_01" style="background-image: none;background-color: #fff;" onclick="setLocation('<?php echo $data->getExternal_url(); ?>')">
+		         <div class="img"><img width="100%" height="auto" src="<?php echo Mage::getBaseUrl('media').$data->getImage();?>" style="border-bottom: none;"></div>
+		         <div class="buy_div">
+				 <?php if($storeid==2) { ?>
+		             <span><b><?php echo $data->getName();?></b><br /><?php echo $data->getDescription();?></span>
+				 <?php } else { ?>
+				      <span><b><?php echo $data->getName();?></b><br /><?php echo $data->getDescription_en();?></span>
+				 <?php } ?>
+		         </div>
+		      <div class="spacer"></div>
+		</div>
+	<?php endif;?>
+<?php endforeach;?>
+</div>

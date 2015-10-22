@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Hasla_Inspiration extension
+ * 
+ * NOTICE OF LICENSE
+ * 
+ * This source file is subject to the MIT License
+ * that is bundled with this package in the file LICENSE.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/mit-license.php
+ * 
+ * @category       Hasla
+ * @package        Hasla_Inspiration
+ * @copyright      Copyright (c) 2014
+ * @license        http://opensource.org/licenses/mit-license.php MIT License
+ */
+--> 
+<layout>
+    <adminhtml_inspiration_inspiration_index>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>cms/hasla_inspiration/inspiration</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="hasla_inspiration/adminhtml_inspiration" name="inspiration" />
+
+        </reference>
+    </adminhtml_inspiration_inspiration_index>
+    <adminhtml_inspiration_inspiration_grid>
+        <block type="core/text_list" name="root" output="toHtml">
+            <block type="hasla_inspiration/adminhtml_inspiration_grid" name="inspiration_grid"/>
+        </block>
+    </adminhtml_inspiration_inspiration_grid>
+    <!-- Inspiration add/edit action -->
+    <adminhtml_inspiration_inspiration_edit>
+        <update handle="editor"/>
+        <reference name="menu">
+            <action method="setActive">
+                <menupath>cms/hasla_inspiration/inspiration</menupath>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="hasla_inspiration/adminhtml_inspiration_edit" name="inspiration_edit"></block>
+        </reference>
+        <reference name="left">
+            <block type="hasla_inspiration/adminhtml_inspiration_edit_tabs" name="inspiration_tabs"></block>
+        </reference>
+    </adminhtml_inspiration_inspiration_edit>
+
+</layout>

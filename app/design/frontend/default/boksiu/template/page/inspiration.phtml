@@ -1,0 +1,106 @@
+<?php 
+		$connection = Mage::getSingleton('core/resource')->getConnection('core_write');
+		$prefix = Mage::getConfig()->getTablePrefix();
+		$tblname=$prefix.'hasla_inspiration_inspiration';
+		$sql = $connection->query("select * from $tblname where status='1' ORDER BY entity_id DESC LIMIT 0,1");
+		while($row1 = $sql->fetch())
+		{
+		 $main_banner_product_name = $row1['main_banner_product_name'];
+		 $main_banner_product_url = $row1['main_banner_product_url'];
+		 $mainbannerimage = $row1['mainbanner'];
+		 $main_banner_nw = $row1['main_banner_new_window'];
+		 
+		 $left_product1_name = $row1['left_product1_name'];
+		 $left_product1_url = $row1['left_product1_url'];
+		 $leftproductImage1 = $row1['left_product1_image'];
+		 $left_product1_nw = $row1['left_product1_new_window'];
+		 
+		 $left_product2_name = $row1['left_product2_name'];
+		 $left_product2_url = $row1['left_product2_url'];
+		 $leftproductImage2 = $row1['left_product2_image'];
+		 $left_product2_nw = $row1['left_product2_new_window'];
+		 
+		 $left_product3_name = $row1['left_product3_name'];
+		 $left_product3_url = $row1['left_product3_url'];
+		 $leftproductImage3 = $row1['left_product3_image'];
+		 $left_product3_nw = $row1['left_product3_new_window'];
+		 
+		 $left_product4_name = $row1['left_product4_name'];
+		 $left_product4_url = $row1['left_product4_url'];
+		 $leftproductImage4 = $row1['left_product4_image'];
+		 $left_product4_nw = $row1['left_product4_new_window'];
+		 
+		 $right_product_name = $row1['right_product_name'];
+		 $right_product_url = $row1['right_product_url'];
+		 $right_product_image = $row1['right_product_image'];
+		 $right_product_nw = $row1['right_product_new_window'];
+		
+		 $bottom_desc_title = $row1['bottom_desc_title'];
+		 $bottom_desc = $row1['bottom_desc'];
+		 $bottom_desc_en = $row1['bottom_desc_en'];
+		// echo '<pre/>';print_r($row1);
+		}
+		?>
+		<?php 
+		
+	
+			   $mainbannerimage; 
+			   $leftproductImage1;
+			   $leftproductImage2;
+			   $leftproductImage3;
+		       $leftproductImage4;
+		       $right_product_image;
+			   $mainimageurl =  Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB);
+		?>
+<div class="main_slider" >
+                <div class="banner">
+                	<div class="cam_icon">
+					<a href="<?php echo $main_banner_product_url;  ?>" <?php if($main_banner_nw) {echo 'target="_blank"';} ?>><img src="<?php echo $mainimageurl.'/media/inspiration/image'.$mainbannerimage; ?>" alt="" width="1000" height="390" /></a>
+					<div class="hover_div_name"><a href="<?php echo $main_banner_product_url;  ?>" <?php if($main_banner_nw) {echo 'target="_blank"';} ?>><?php echo $main_banner_product_name; ?></a></div>
+					</div>
+                </div>
+                <div class="inspir_left_imgs">
+                	<div class="inspire_thumb_main">
+				
+                        <div class="ins_prdct_01">
+						
+						<a href="<?php echo $left_product1_url;?>"  <?php if($left_product1_nw) {echo 'target="_blank"';} ?>><img src="<?php echo $mainimageurl.'/media/inspiration/image'.$leftproductImage1; ?>" alt="" /></a>
+                        	<div class="hover_div_name"><a href="<?php echo $left_product1_url;?>"  <?php if($left_product1_nw) {echo 'target="_blank"';} ?>><?php echo $left_product1_name; ?></a></div>
+						</div>
+						
+                        <div class="ins_prdct_02">
+					
+						<a href="<?php echo $left_product2_url;?>" <?php if($left_product2_nw) {echo 'target="_blank"';} ?>><img src="<?php echo $mainimageurl.'/media/inspiration/image'.$leftproductImage2; ?>" alt=""></a>
+						<div class="hover_div_name"><a href="<?php echo $left_product2_url;?>" <?php if($left_product2_nw) {echo 'target="_blank"';} ?>><?php echo $left_product2_name; ?></a></div></div>
+                        <div class="spacer">
+						</div>
+                    </div>
+                    <div class="inspire_thumb_main">
+                        <div class="ins_prdct_01">
+						<a href="<?php echo $left_product3_url;?>" <?php if($left_product3_nw) {echo 'target="_blank"';} ?>><img src="<?php echo $mainimageurl.'/media/inspiration/image'.$leftproductImage3; ?>" alt=""></a>
+						<div class="hover_div_name"><a href="<?php echo $left_product3_url;?>" <?php if($left_product3_nw) {echo 'target="_blank"';} ?>><?php echo $left_product3_name; ?></a></div>
+						</div>
+                        <div class="ins_prdct_02">
+						<a href="<?php echo $left_product4_url;?>" <?php if($left_product4_nw) {echo 'target="_blank"';} ?>><img src="<?php echo $mainimageurl.'/media/inspiration/image'.$leftproductImage4; ?>" alt=""></a>
+						<div class="hover_div_name"><a href="<?php echo $left_product4_url;?>" <?php if($left_product4_nw) {echo 'target="_blank"';} ?>><?php echo $left_product4_name; ?></a></div>
+						</div>
+                        <div class="spacer"></div>
+                    </div>
+                	<div class="spacer"></div>
+                </div>
+                <div class="inspir_right_imgs">
+         <div class="inpire_01"><a href="<?php echo $right_product_url;?>" <?php if($right_product_nw) {echo 'target="_blank"';} ?>><img src="<?php echo $mainimageurl.'/media/inspiration/image'.$right_product_image; ?>" alt=""></a>
+					<div class="hover_div_name"><a href="<?php echo $right_product_url;?>" <?php if($right_product_nw) {echo 'target="_blank"';} ?>><?php echo $right_product_name; ?></a></div>
+					</div>
+                	<div class="spacer"></div>
+                </div>
+                <div class="spacer"></div>
+                <div class="inspire_peragraph">
+                	<label><?php echo $bottom_desc_title; ?></label>
+                    <p>
+                    	<?php if(Mage::app()->getStore()->getCode()=='us') { echo $bottom_desc_en ; } else { echo $bottom_desc ; } ?>
+                    </p>
+                    <div class="spacer"></div>
+                </div>
+                <div class="spacer"></div>
+            </div>

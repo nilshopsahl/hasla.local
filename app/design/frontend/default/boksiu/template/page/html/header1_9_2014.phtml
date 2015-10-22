@@ -1,0 +1,238 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2014 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+/**
+ * @var Mage_Page_Block_Html_Header $this
+ */
+ 
+  $catalogSearchHelper =  $this->helper('catalogsearch');
+?>
+
+
+
+<div class="top_serch_rpt">
+<div class="top_searc_div">
+    <?php echo $this->getChildHtml('minicart_head'); ?>
+	
+	<div class="top_right">
+	<?php echo $this->getChildHtml('topSearch') ?>
+        <div class="flag_div">
+            <ul>
+			<?php $myStatus = Mage::getSingleton('customer/session')->isLoggedIn(); ?>
+			 
+			<?php if($myStatus): ?>
+			 
+			<li><a href="<?php echo Mage::getBaseUrl();?>customer/account/logout" title="Customer Register">Log Out </a></li>
+			<li><?php echo '| '.$this->getLayout()->getBlock('header')->getWelcome() ?></li>
+			
+			<?php endif ?>
+			    <li><?php echo $this->getChildHtml('store_language') ?></li>
+                <!--<li><a href="#"><img src="<?php echo $this->getSkinUrl("images/flag_icon.jpg")?>" width="32" height="26" /></a></li>-->
+               <li><a href="<?php echo Mage::getBaseUrl()."customer/account/"?>">My Account</a></li>
+                <li><a href="<?php echo Mage::getBaseUrl()."customer/account/"?>"><img src="<?php echo $this->getSkinUrl("images/person_icon_03.jpg")?>" width="18" height="26" /></a></li>
+            </ul> 
+			 
+
+        </div>
+        <!--<div class="header-minicart">-->
+            
+        <!--</div>-->
+	  <div class="spacer"></div>
+	  <?php 
+	  $count = $this->helper('checkout/cart')->getSummaryCount();  //get total items in cart
+      $total = $this->helper('checkout/cart')->getQuote()->getGrandTotal();
+	  ?>
+	  <div class="shopping_cart">
+		<div class="cart_01">
+			<label id="cartpricetotalres"><?php echo Mage::helper('core')->currency($total, true, false).',-';?></label>
+			<img onmouseover="javascript:showMIniCart();" onclick="javascript:showMIniCart();"  src="<?php echo $this->getSkinUrl("images/shopping_icon.png")?>" width="27" height="24" />
+        </div>
+        <div class="cart_01" style="margin-top: -2px;">
+		<?php if($count == ''){$count = '0';}?>
+			<label id="cartCountMini" style="background: #d3d4d2;padding: 0px 8px 0px 8px;  text-align: center;  line-height: 25px; margin: 2px;"><?php echo $count;?></label>
+             <span>YOUR SHOPPING CART</span>
+        </div>
+        </div>
+           <div class="spacer"></div>	
+        <!--<div class="quick-access">
+            
+            <p class="welcome-msg"><?php echo $this->getChildHtml('welcome') ?> <?php echo $this->getAdditionalHtml() ?></p>
+            <?php echo $this->getChildHtml('topLinks') ?>
+            <?php echo $this->getChildHtml('store_language') ?>
+        </div>-->
+        <?php //echo $this->getChildHtml('topContainer'); ?>
+    </div>
+	
+    <div class="nav_button"><img src="<?php echo $this->getSkinUrl("images/menu_bar.png");?>" width="63" height="14" id="nav_button" /></div>
+	
+    <div class="res_left_div">
+         <ul>
+              	<a href="<?php echo Mage::getUrl('checkout/cart'); ?>" class="cart_res_none"><li><label id="cartCountMini" style="background: #d3d4d2;  padding: 0px 8px 0px 8px;  text-align: center;  line-height: 25px;  font-size: 15px;  color: #555;  font-weight: bold;position: relative;"><?php echo $count;?></label><img src="<?php echo $this->getSkinUrl("images/shopping_icon.png")?>" width="27" height="24" style="position: relative;top: 3px;left: 8px;"/></li></a>
+                 <!-- <li class="li_cont_bg"><a href="#"> 1</a></li></a> -->
+				<li style="margin-top: 7px;"><?php echo $this->getChildHtml('store_language') ?></li>
+          </ul>
+    </div>
+    <div class="spacer"></div>
+</div>
+</div>
+
+	<div class="top_scroller" style="margin-top: -196px;">
+	            <div class="sub_top_scroller">
+	        	<div class="scrl_menu">
+					 <?php $currentUrl = Mage::helper('core/url')->getCurrentUrl(); ?>
+	                 <div class="menu_01"><a href="<?php echo Mage::getBaseUrl()?>shop-by-collection.html" <?php echo (stristr($currentUrl,"shop-by-collection")==true)?'id="menu_active"':'';?>><?php echo $this->__('SHOP BY COLLECTIONS'); ?></a></div>
+	                <div class="menu_01"><a href="<?php echo Mage::getBaseUrl()."shopcategory"; ?>" <?php echo (stristr($currentUrl,"shopcategory")==true)?'id="menu_active"':'';?>><?php echo $this->__('SHOP BY CATEGORY'); ?></a></div>
+	                <div class="menu_01"><a href="<?php echo Mage::getBaseUrl()?>inspiration" <?php echo (stristr($currentUrl,"inspiration")==true)?'id="menu_active"':'';?>><?php echo $this->__('INSPIRATION'); ?></a></div>
+	                <div class="spacer"></div>
+	                <div class="mint_conto">
+	                    <ul>
+	                        <li><a href="<?php echo Mage::getBaseUrl();?>customer/account/login/">MIN KONTO</a></li>
+	                        <li><a href="<?php echo Mage::getBaseUrl();?>customer/account/login/"><img width="18" height="26" src="<?php echo $this->getSkinUrl("images/person_icon_03.jpg"); ?>"></a></li>
+	                    </ul>
+	                </div>
+	                <div class="spacer"></div>
+					<!--<div class="search_div2">
+	                    <div class="srch_button2"><a href="#">Search</a></div>
+	                    <input type="text">
+	                </div>-->
+					
+					<form id="search_mini_form2" action="<?php echo $catalogSearchHelper->getResultUrl(); ?>" method="get">
+		
+						<div class="search_div2">
+	                    <div class="srch_button2"><a href="javascript:void(0);" onclick="document.getElementById('search_mini_form2').submit();">Search</a>
+						</div>
+	                    <input id="search" type="text" name="<?php echo $catalogSearchHelper->getQueryParamName(); ?>" value="<?php echo $catalogSearchHelper->getEscapedQueryText() ?>" class="input-text" maxlength="<?php echo $catalogSearchHelper->getMaxQueryLength();?>" />
+	                    </div>
+					    <div id="search_autocomplete" class="search-autocomplete"></div>
+					 
+						<script type="text/javascript">
+						//<![CDATA[
+							var searchForm = new Varien.searchForm('search_mini_form2', 'search', '<?php echo $this->__('Search entire store here...'); ?>');
+							searchForm.initAutocomplete('<?php echo $catalogSearchHelper->getSuggestUrl(); ?>', 'search_autocomplete');
+						//]]>
+						</script>
+					
+				 </form>
+				 
+	             </div>
+	             <div class="spacer"></div>
+	            </div>
+	           
+	            <div class="spacer"></div>
+	        </div>
+
+
+
+
+<?php if (!in_array(Mage::app()->getFrontController()->getAction()->getFullActionName(), array('cms_index_noRoute', 'cms_index_defaultNoRoute'))) {
+   $currentUrl = Mage::helper('core/url')->getCurrentUrl();
+   $pos = strpos($currentUrl, 'bunad');
+   //echo $pos;
+}?>
+<?php if($pos==FALSE):?>
+<div class="logo_bg_bar">
+	<div class="blue_bar">
+	<div class="logo">
+		 <a class="logo_hide" href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>"><img src="<?php echo $this->getLogoSrc() ?>" width="301" height="198" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+		 <a class="res_logo" href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>"><img src="<?php echo Mage::getBaseUrl('skin').'frontend/default/boksiu/images/res_logo.png' ?>" width="260" height="139" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+	</div>
+	<div class="menu">
+		<ul>
+		<?php  $currentUrl = Mage::helper('core/url')->getCurrentUrl();?>
+		<li><a href="<?php echo Mage::getBaseUrl()?>shop-by-collection.html" <?php echo (stristr($currentUrl,"shop-by-collection")==true)?'style="color: #448e99;font-weight: bold;"':''  ;?> ><?php echo $this->__('SHOP BY COLLECTIONS'); ?></a></li>
+		<li>|</li>
+		<li><a href="<?php echo Mage::getBaseUrl()."shopcategory"; ?>" <?php echo (stristr($currentUrl,"shopcategory")==true)?'style="color: #448e99;font-weight: bold;"':''  ;?>><?php echo $this->__('SHOP BY CATEGORY'); ?></a></li>
+		<li>|</li>
+		<li><a href="<?php echo Mage::getBaseUrl()?>inspiration" <?php echo (stristr($currentUrl,"inspiration")==true)?'id="menu_active"':'';?>><?php echo $this->__('INSPIRATION'); ?></a></li>
+	    </ul>
+	</div>
+    </div>
+</div>
+<?php else:?>
+<div class="logo_bg_bar2">
+	<div class="blue_bar">
+	<div class="logo">
+		 <a class="logo_hide" href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>"><img src="<?php echo $this->getSkinUrl().'images/logo_2.jpg'; ?>" width="301" height="198" alt="<?php echo $this->getLogoAlt() ?>" /></a>
+         <a class="res_logo" href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>"><img src="<?php  echo $this->getSkinUrl().'images/logo_2.jpg'; ?>" width="301" height="198" alt="<?php echo $this->getLogoAlt() ?>" /></a>	
+	</div>
+	<div class="menu">
+		<ul>
+		<li><a href="<?php echo Mage::getBaseUrl()?>shop-by-collection.html"><?php echo $this->__('SHOP BY COLLECTIONS'); ?></a></li>
+		<li>|</li>
+		<li><a href="<?php echo Mage::getBaseUrl()."shopcategory"; ?>"><?php echo $this->__('SHOP BY CATEGORY'); ?></a></li>
+		<li>|</li>
+		<li><a href="<?php echo Mage::getBaseUrl()?>inspiration/" <?php echo (stristr($currentUrl,"inspiration")==true)?'id="menu_active"':'';?>><?php echo $this->__('INSPIRATION'); ?></a></li>
+	    </ul>
+	</div>
+    </div>
+</div>	
+<?php endif;?>	
+
+<?php //echo $this->getChildHtml('topMenu') ?>
+<script type="text/javascript">
+var counter=1;
+var test = jQuery.noConflict();
+test(document).ready(function(){
+
+	
+	test('#nav_button').click(function(evnt){
+		if (counter ==1){
+		counter = 2;
+		
+		test(".top_scroller").animate({marginTop: 4});
+		} else {
+			counter = 1;
+	
+		test(".top_scroller").animate({marginTop: -196});
+		}
+		evnt.stopPropagation();
+	});
+	test('.top_scroller').click(function(evnt){
+		evnt.stopPropagation();
+	});
+	 test('#shop_collection_opner').click(function(evnt){
+		test(".top_scroller").animate({marginTop: -196});
+		//evnt.stopPropagation();
+	});
+	
+	test('#shop_collection_opner').click(function(evnt){
+		test('#shop_by_collection').slideToggle('slow')
+		evnt.stopPropagation();
+	});
+	
+	test('#shop_by_collection').click(function(evnt){
+		evnt.stopPropagation();
+	});
+	/*test('#shop_collection_opner').click(function(evnt){
+	//alert('hi');	
+	//	test('#shop_by_collection').slideToggle('slow');
+		test('#shop_by_collection').slideDown('slow');
+		//evnt.stopPropagation();
+	});*/
+	
+	
+	 });
+	
+</script>

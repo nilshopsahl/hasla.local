@@ -1,0 +1,27 @@
+<?xml version="1.0"?>   
+<layout version="0.1.0">   
+  <default>
+    <reference name="top.links">
+            <action method="addLink" translate="label title" ><label>Look Book</label><url helper="lookbook/getConnectUrl"/><title>Look Book</title><prepare/><urlParams/><position>11</position></action>
+        </reference> 
+    </default>
+  <lookbook_index_index>   
+    <reference name="root">   
+      <action method="setTemplate"><template>page/1column.phtml</template></action>   
+    </reference>   
+    
+    <reference name="head">
+		
+		<action method="addItem"><type>skin_css</type><name>lookbook/css/layout.css</name></action>
+		<action method="addItem"><type>skin_css</type><name>lookbook/css/style1.css</name></action>	        
+		<action method="addItem"><type>skin_js</type><name>lookbook/js/jquery.easing.js</name></action>
+		<action method="addItem"><type>skin_js</type><name>lookbook/js/script.js</name></action>	        	        
+		
+    </reference>
+     
+    <reference name="content">
+      <block type="lookbook/index" name="lookbook_index" template="lookbook/index.phtml"/>   
+    </reference>   
+  </lookbook_index_index>   
+</layout>   
+	

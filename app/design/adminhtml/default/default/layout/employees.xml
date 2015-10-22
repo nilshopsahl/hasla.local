@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <employees_adminhtml_employees_index>
+	<reference name="content">
+	  <block type="employees/adminhtml_employees" name="employees" />
+	</reference>
+  </employees_adminhtml_employees_index>
+</layout>

@@ -1,0 +1,1097 @@
+2015-04-08T02:24:25+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:25+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:25+00:00 DEBUG (7): Array
+(
+    [0] => listMemberInfo
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:25+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => sharapova-1959xxx@mail.ru
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:25+00:00 DEBUG (7): Array
+(
+    [success] => 0
+    [errors] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [email_address] => sharapova-1959xxx@mail.ru
+                    [error] => The email address passed does not exist on this list
+                )
+
+        )
+
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:25+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:25+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:25+00:00 DEBUG (7): Array
+(
+    [0] => listSubscribe
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:25+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => sharapova-1959xxx@mail.ru
+    [2] => Array
+        (
+            [STOREID] => 2
+            [WEBSITE] => 1
+            [STORECRED] => 
+            [CGROUP] => General
+            [GROUPINGS] => Array
+                (
+                )
+
+        )
+
+    [3] => html
+    [4] => 
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:26+00:00 DEBUG (7): Array
+(
+    [0] => 1
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:26+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:26+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:26+00:00 DEBUG (7): Array
+(
+    [0] => listMemberInfo
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:26+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => sharapova-1959xxx@mail.ru
+    [__pid] => 1402406
+)
+
+2015-04-08T02:24:26+00:00 DEBUG (7): Array
+(
+    [success] => 1
+    [errors] => 0
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [email] => sharapova-1959xxx@mail.ru
+                    [id] => a40c306ef2
+                    [euid] => a40c306ef2
+                    [email_type] => html
+                    [ip_signup] => 
+                    [timestamp_signup] => 
+                    [ip_opt] => 89.221.243.147
+                    [timestamp_opt] => 2015-04-08 02:24:26
+                    [member_rating] => 2
+                    [info_changed] => 2015-04-08 02:24:26
+                    [web_id] => 132479097
+                    [leid] => 132479097
+                    [language] => 
+                    [list_id] => 7fc7067d5f
+                    [list_name] => Hasla
+                    [merges] => Array
+                        (
+                            [EMAIL] => sharapova-1959xxx@mail.ru
+                            [FNAME] => 
+                            [LNAME] => 
+                            [CGROUP] => General
+                        )
+
+                    [status] => subscribed
+                    [timestamp] => 2015-04-08 02:24:26
+                    [is_gmonkey] => 
+                    [lists] => Array
+                        (
+                        )
+
+                    [geo] => Array
+                        (
+                        )
+
+                    [clients] => Array
+                        (
+                        )
+
+                    [static_segments] => Array
+                        (
+                        )
+
+                    [notes] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [__pid] => 1402406
+)
+
+2015-04-12T08:46:50+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 4086867
+)
+
+2015-04-12T08:46:50+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 4086867
+)
+
+2015-04-12T08:46:50+00:00 DEBUG (7): Array
+(
+    [0] => listMemberInfo
+    [__pid] => 4086867
+)
+
+2015-04-12T08:46:50+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => tj@boksiu.com
+    [__pid] => 4086867
+)
+
+2015-04-12T08:46:51+00:00 DEBUG (7): Array
+(
+    [success] => 1
+    [errors] => 0
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [email] => tj@boksiu.com
+                    [id] => 2ef89c8191
+                    [euid] => 2ef89c8191
+                    [email_type] => html
+                    [ip_signup] => 
+                    [timestamp_signup] => 
+                    [ip_opt] => 188.40.72.8
+                    [timestamp_opt] => 2014-08-18 08:52:48
+                    [member_rating] => 4
+                    [info_changed] => 2014-08-18 08:52:48
+                    [web_id] => 115273581
+                    [leid] => 115273581
+                    [language] => 
+                    [list_id] => 7fc7067d5f
+                    [list_name] => Hasla
+                    [merges] => Array
+                        (
+                            [EMAIL] => tj@boksiu.com
+                            [FNAME] => 
+                            [LNAME] => 
+                            [CGROUP] => NOT LOGGED IN
+                        )
+
+                    [status] => subscribed
+                    [timestamp] => 2014-08-18 08:52:48
+                    [is_gmonkey] => 
+                    [lists] => Array
+                        (
+                            [9d371ec615] => subscribed
+                        )
+
+                    [geo] => Array
+                        (
+                            [latitude] => 49.1159000
+                            [longitude] => 10.7534000
+                            [gmtoff] => 1
+                            [dstoff] => 2
+                            [timezone] => Europe/Zurich
+                            [cc] => DE
+                            [region] => BY
+                        )
+
+                    [clients] => Array
+                        (
+                        )
+
+                    [static_segments] => Array
+                        (
+                        )
+
+                    [notes] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [__pid] => 4086867
+)
+
+2015-04-12T08:46:51+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 4086867
+)
+
+2015-04-12T08:46:51+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 4086867
+)
+
+2015-04-12T08:46:51+00:00 DEBUG (7): Array
+(
+    [0] => listMemberInfo
+    [__pid] => 4086867
+)
+
+2015-04-12T08:46:51+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => tj@boksiu.com
+    [__pid] => 4086867
+)
+
+2015-04-12T08:46:51+00:00 DEBUG (7): Array
+(
+    [success] => 1
+    [errors] => 0
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [email] => tj@boksiu.com
+                    [id] => 2ef89c8191
+                    [euid] => 2ef89c8191
+                    [email_type] => html
+                    [ip_signup] => 
+                    [timestamp_signup] => 
+                    [ip_opt] => 188.40.72.8
+                    [timestamp_opt] => 2014-08-18 08:52:48
+                    [member_rating] => 4
+                    [info_changed] => 2014-08-18 08:52:48
+                    [web_id] => 115273581
+                    [leid] => 115273581
+                    [language] => 
+                    [list_id] => 7fc7067d5f
+                    [list_name] => Hasla
+                    [merges] => Array
+                        (
+                            [EMAIL] => tj@boksiu.com
+                            [FNAME] => 
+                            [LNAME] => 
+                            [CGROUP] => NOT LOGGED IN
+                        )
+
+                    [status] => subscribed
+                    [timestamp] => 2014-08-18 08:52:48
+                    [is_gmonkey] => 
+                    [lists] => Array
+                        (
+                            [9d371ec615] => subscribed
+                        )
+
+                    [geo] => Array
+                        (
+                            [latitude] => 49.1159000
+                            [longitude] => 10.7534000
+                            [gmtoff] => 1
+                            [dstoff] => 2
+                            [timezone] => Europe/Zurich
+                            [cc] => DE
+                            [region] => BY
+                        )
+
+                    [clients] => Array
+                        (
+                        )
+
+                    [static_segments] => Array
+                        (
+                        )
+
+                    [notes] => Array
+                        (
+                        )
+
+                )
+
+        )
+
+    [__pid] => 4086867
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => listsForEmail
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => tj@boksiu.com
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => 9d371ec615
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => listMemberActivity
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => tj@boksiu.com
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [success] => 1
+    [errors] => 
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [0] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2015-03-06 16:48:20
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => d61c2085b2
+                            [title] => Nytt
+                            [bounce_type] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2015-03-06 15:58:33
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => d61c2085b2
+                            [title] => Nytt
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [2] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2015-01-08 15:01:19
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 874285926f
+                            [title] => Rabattkode, januar
+                            [bounce_type] => 
+                        )
+
+                    [3] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2015-01-08 14:12:52
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 874285926f
+                            [title] => Rabattkode, januar
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [4] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2014-12-18 12:49:37
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 82194913a8
+                            [title] => Exclusive
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [5] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2014-12-03 14:28:56
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => e200b55128
+                            [title] => Fri frakt
+                            [bounce_type] => 
+                        )
+
+                    [6] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2014-12-03 13:31:24
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => e200b55128
+                            [title] => Fri frakt
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [7] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2014-11-24 16:26:11
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 4153e7629d
+                            [title] => Jul 2014
+                            [bounce_type] => 
+                        )
+
+                    [8] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2014-11-24 15:23:22
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 4153e7629d
+                            [title] => Jul 2014
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [9] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2014-11-07 12:19:39
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 614e76548c
+                            [title] => Jubileumstilbod!
+                            [bounce_type] => 
+                        )
+
+                    [10] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2014-11-07 11:35:33
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 614e76548c
+                            [title] => Jubileumstilbod!
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [11] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2014-09-17 11:08:57
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 970865de47
+                            [title] => Nettbutikk
+                            [bounce_type] => 
+                        )
+
+                    [12] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2014-09-17 10:51:21
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 970865de47
+                            [title] => Nettbutikk
+                            [bounce_type] => 
+                        )
+
+                    [13] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2014-09-17 10:33:49
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 970865de47
+                            [title] => Nettbutikk
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                )
+
+        )
+
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => listMemberActivity
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [0] => 9d371ec615
+    [1] => tj@boksiu.com
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:31+00:00 DEBUG (7): Array
+(
+    [success] => 1
+    [errors] => 
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [0] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2015-02-27 11:28:02
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 57f7665009
+                            [title] => Contentio Dashboard nyhetsbrev 26 Februar
+                            [bounce_type] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2015-02-27 10:09:40
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 57f7665009
+                            [title] => Contentio Dashboard nyhetsbrev 26 Februar
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                )
+
+        )
+
+    [__pid] => 4089623
+)
+
+2015-04-12T08:49:33+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:33+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:33+00:00 DEBUG (7): Array
+(
+    [0] => listsForEmail
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:33+00:00 DEBUG (7): Array
+(
+    [0] => tj@boksiu.com
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:33+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => 9d371ec615
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:33+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:33+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:33+00:00 DEBUG (7): Array
+(
+    [0] => listMemberActivity
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:33+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => tj@boksiu.com
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:34+00:00 DEBUG (7): Array
+(
+    [success] => 1
+    [errors] => 
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [0] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2015-03-06 16:48:20
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => d61c2085b2
+                            [title] => Nytt
+                            [bounce_type] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2015-03-06 15:58:33
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => d61c2085b2
+                            [title] => Nytt
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [2] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2015-01-08 15:01:19
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 874285926f
+                            [title] => Rabattkode, januar
+                            [bounce_type] => 
+                        )
+
+                    [3] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2015-01-08 14:12:52
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 874285926f
+                            [title] => Rabattkode, januar
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [4] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2014-12-18 12:49:37
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 82194913a8
+                            [title] => Exclusive
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [5] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2014-12-03 14:28:56
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => e200b55128
+                            [title] => Fri frakt
+                            [bounce_type] => 
+                        )
+
+                    [6] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2014-12-03 13:31:24
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => e200b55128
+                            [title] => Fri frakt
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [7] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2014-11-24 16:26:11
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 4153e7629d
+                            [title] => Jul 2014
+                            [bounce_type] => 
+                        )
+
+                    [8] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2014-11-24 15:23:22
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 4153e7629d
+                            [title] => Jul 2014
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [9] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2014-11-07 12:19:39
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 614e76548c
+                            [title] => Jubileumstilbod!
+                            [bounce_type] => 
+                        )
+
+                    [10] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2014-11-07 11:35:33
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 614e76548c
+                            [title] => Jubileumstilbod!
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                    [11] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2014-09-17 11:08:57
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 970865de47
+                            [title] => Nettbutikk
+                            [bounce_type] => 
+                        )
+
+                    [12] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2014-09-17 10:51:21
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 970865de47
+                            [title] => Nettbutikk
+                            [bounce_type] => 
+                        )
+
+                    [13] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2014-09-17 10:33:49
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 970865de47
+                            [title] => Nettbutikk
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                )
+
+        )
+
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:34+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:34+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:34+00:00 DEBUG (7): Array
+(
+    [0] => listMemberActivity
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:34+00:00 DEBUG (7): Array
+(
+    [0] => 9d371ec615
+    [1] => tj@boksiu.com
+    [__pid] => 4089871
+)
+
+2015-04-12T08:49:34+00:00 DEBUG (7): Array
+(
+    [success] => 1
+    [errors] => 
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [0] => Array
+                        (
+                            [action] => open
+                            [timestamp] => 2015-02-27 11:28:02
+                            [url] => 
+                            [type] => 
+                            [campaign_id] => 57f7665009
+                            [title] => Contentio Dashboard nyhetsbrev 26 Februar
+                            [bounce_type] => 
+                        )
+
+                    [1] => Array
+                        (
+                            [action] => sent
+                            [timestamp] => 2015-02-27 10:09:40
+                            [url] => 
+                            [type] => regular
+                            [campaign_id] => 57f7665009
+                            [title] => Contentio Dashboard nyhetsbrev 26 Februar
+                            [parent_campaign] => 
+                            [bounce_type] => regular
+                        )
+
+                )
+
+        )
+
+    [__pid] => 4089871
+)
+
+2015-04-13T17:55:58+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 1181691
+)
+
+2015-04-13T17:55:58+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 1181691
+)
+
+2015-04-13T17:55:58+00:00 DEBUG (7): Array
+(
+    [0] => listsForEmail
+    [__pid] => 1181691
+)
+
+2015-04-13T17:55:58+00:00 DEBUG (7): Array
+(
+    [0] => ingrid.dyr@gmail.com
+    [__pid] => 1181691
+)
+
+2015-04-13T17:55:58+00:00 DEBUG (7): Array
+(
+    [0] => 
+    [__pid] => 1181691
+)
+
+2015-04-13T17:55:58+00:00 DEBUG (7): Array
+(
+    [0] => Error: There is no record of the email address "ingrid.dyr@gmail.com" in your account, code 232
+    [__pid] => 1181691
+)
+
+2015-04-14T16:03:06+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 1764429
+)
+
+2015-04-14T16:03:06+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 1764429
+)
+
+2015-04-14T16:03:06+00:00 DEBUG (7): Array
+(
+    [0] => listMemberInfo
+    [__pid] => 1764429
+)
+
+2015-04-14T16:03:06+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => Sirens@broadpark.no
+    [__pid] => 1764429
+)
+
+2015-04-14T16:03:06+00:00 DEBUG (7): Array
+(
+    [success] => 0
+    [errors] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [email_address] => Sirens@broadpark.no
+                    [error] => The email address passed does not exist on this list
+                )
+
+        )
+
+    [__pid] => 1764429
+)
+
+2015-04-14T16:03:06+00:00 DEBUG (7): Array
+(
+    [0] => us7.api.mailchimp.com
+    [__pid] => 1764429
+)
+
+2015-04-14T16:03:06+00:00 DEBUG (7): Array
+(
+    [0] => 865738bbbdcf68070ee43d70b0118b7d-us7
+    [__pid] => 1764429
+)
+
+2015-04-14T16:03:06+00:00 DEBUG (7): Array
+(
+    [0] => listSubscribe
+    [__pid] => 1764429
+)
+
+2015-04-14T16:03:06+00:00 DEBUG (7): Array
+(
+    [0] => 7fc7067d5f
+    [1] => Sirens@broadpark.no
+    [2] => Array
+        (
+            [FNAME] => Siren
+            [LNAME] => Samdal
+            [BILLING] => Array
+                (
+                    [addr1] => Våkleivbrotet 26
+                    [addr2] => 
+                    [city] => Bergen
+                    [state] => Bønes
+                    [zip] => 5155
+                    [country] => NO
+                )
+
+            [TELEPHONE] => 91643742
+            [SHIPPING] => Array
+                (
+                    [addr1] => Våkleivbrotet 26
+                    [addr2] => 
+                    [city] => Bergen
+                    [state] => Bønes
+                    [zip] => 5155
+                    [country] => NO
+                )
+
+            [STOREID] => 2
+            [WEBSITE] => 1
+            [STORECRED] => 
+            [CGROUP] => General
+            [GROUPINGS] => Array
+                (
+                )
+
+        )
+
+    [3] => html
+    [4] => 
+    [__pid] => 1764429
+)
+
+2015-04-14T16:03:07+00:00 DEBUG (7): Array
+(
+    [0] => 1
+    [__pid] => 1764429
+)
+

@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <Hasla_Bunadlist>
+      <version>1.0.0</version>
+    </Hasla_Bunadlist>
+  </modules>
+  <global>
+    <helpers>
+      <bunadlist>
+        <class>Hasla_Bunadlist_Helper</class>
+      </bunadlist>
+    </helpers>
+	<blocks>
+	  <bunadlist>
+		<class>Hasla_Bunadlist_Block</class>
+	  </bunadlist>
+	</blocks>
+	<models>
+	  <bunadlist>
+		<class>Hasla_Bunadlist_Model</class>
+		<resourceModel>bunadlist_mysql4</resourceModel>
+	  </bunadlist>
+	  <bunadlist_mysql4>
+		<class>Hasla_Bunadlist_Model_Mysql4</class>
+		<entities>		  
+			  <bunadlist>
+				<table>bunadlist</table>
+			  </bunadlist>
+        </entities>
+	  </bunadlist_mysql4>
+	</models>
+	<resources>
+	  <bunadlist_setup>
+		<setup>
+		  <module>Hasla_Bunadlist</module>
+		</setup>
+		<connection>
+		  <use>core_setup</use>
+		</connection>
+	  </bunadlist_setup>
+	  <bunadlist_write>
+		<connection>
+		  <use>core_write</use>
+		</connection>
+	  </bunadlist_write>
+	  <bunadlist_read>
+		<connection>
+		  <use>core_read</use>
+		</connection>
+	  </bunadlist_read>
+	</resources>
+  </global>
+  <admin>
+	<routers>
+	  <bunadlist>
+	    <use>admin</use>
+		<args>
+		  <module>Hasla_Bunadlist</module>
+		  <frontName>admin_bunadlist</frontName>
+		</args>
+	  </bunadlist>
+	</routers>
+  </admin>
+  <adminhtml>
+	<menu>
+	  <bunadlist module="bunadlist">
+		<title>Bunad</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <bunadlist module="bunadlist">
+		    <title>Manage Bunadlist</title>
+			<sort_order>0</sort_order>
+			<action>admin_bunadlist/adminhtml_bunadlist</action>
+		  </bunadlist>
+		</children>
+	  </bunadlist>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<bunadlist translate="title" module="bunadlist">
+			  <title>Bunadlist</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <bunadlistbackend translate="title">
+			<title>Backend Page Title</title>
+		  </bunadlistbackend>
+		  <bunadlist translate="title">
+			<title>Manage Bunadlist</title>
+			<sort_order>0</sort_order>
+		  </bunadlist>
+			  </children>
+			</bunadlist>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<bunadlist>
+		  <file>bunadlist.xml</file>
+		</bunadlist>
+	  </updates>
+	</layout>
+  </adminhtml>
+</config> 

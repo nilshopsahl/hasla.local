@@ -1,0 +1,44 @@
+<?php
+$Collection=$this->getCollection();
+
+/*foreach($Collection as $item){
+	echo "<pre>";
+	print_r($item->getData());
+}
+*/	
+	?>
+<div class="main_slider">
+    <div class="product_list_left">
+      	<div class="spacer"></div>
+          <ul style="text-transform:uppercase;"> 
+			<li><a href="<?php echo $this->getUrl('') ?>"><?php echo $this->__('Home'); ?></a></li>
+			<?php foreach ($Collection as $item): ?>
+				<li><a href="<?php echo $this->getUrl('productkataloges/view/details',array('id'=>$item->getId())) ?>"><?php echo $item->getName();?></a></li>
+			<?php endforeach;?>
+          </ul>
+       <div class="spacer"></div>
+    </div>
+    <div class="thumb_nail_main_1">
+    	<?php foreach ($Collection as $item): ?>
+
+              <div class="thumb_nail_02">
+              <a href="<?php echo $this->getUrl('productkataloges/view/details',array('id'=>$item->getId())) ?>"><div class="img"><img width="100%" height="auto" src="<?php echo Mage::getBaseUrl('media').''.$item->getImage()?>" style="height:160px;"></div></a>
+                   <div class="buy_div">
+                       <span><?php echo $item->getName();?></span>
+                   </div>
+             </div>
+             
+           	<?php // endif;?>
+		 <?php endforeach;?>   
+         <div class="spacer"></div>
+                    <div class="spacer"></div>
+                   <div class="category_text_div">
+					
+					<?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('productkatalogbottom')->toHtml(); ?> 
+                    	
+                    	<div class="spacer"></div>
+                    </div>
+                    <div class="spacer"></div>
+                </div>
+                <div class="spacer"></div>
+            </div>

@@ -1,0 +1,671 @@
+# of Use,antall ganger brukt
+%1$s incl tax.,%1$s inkl mva.
+%s - %s,%s -- %s
+%s Item(s),%s vare(r)
+(Copy data from: %s),(Kopier data frå: %s)
+(Will make search for the query above return results for this search.),(Vil returnere treff fra spørringen over for dette søket.)
+* Required Fields,* Påkrevde felt
+-- Please Select --,-- Vennligst velg --
+A name is required,Namn er påkrevd
+ALL GROUPS,ALLE GRUPPER
+AM,AM
+Action,Handling
+Add Attribute,Legg til attributt
+Add Design Change,Legg til designendring
+Add Group,Legg til gruppe
+Add Items to Cart,Legg varer i handlekurven
+Add New,Legg til ny
+Add New Attribute,Legg til nytt attributt
+Add New Attribute Set,Legg til nytt attributtsett
+Add New Group,Legg til ny gruppe
+Add New Images,Legg til nye bilete
+Add New Option,Legg til nytt val
+Add New Row,Legg til
+Add New Search Term,Legg til ny søkefrase
+Add New Set,Legg til nytt sett
+Add Option,Legg til val
+Add Product,Legg til produkt
+Add Product To Websites,Legg til produkt i nettstad
+Add Root Category,Opprett Toppnivå-kategori
+Add Subcategory,Opprett underkategori
+Add Tax,Opprett momsklasse
+Add Tier,Legg til prisnivå
+Add to Cart,Legg i handlekorga
+Add to Compare,Legg til sammenligning
+Add to My Wishlist,Legg i mi ønskjeliste
+Add to Wishlist,Legg i ønskjelista
+Additional Information,Tilleggsinformasjon
+All,Alle
+All Product Types,Alle produkttypar
+All products of this set will be deleted! Are you sure you want to delete this attribute set?,All products of this set will be deleted!! Are you sure you want to delete this attribute set?
+Allow HTML-tags on Front-end,Tillat HTML-tagger i Front-end
+Allowed File Extensions,Tillatt filtyper
+Allowed file extensions to upload,Tillatte filtyper
+Amount,Antal
+Apply To,Bruk på
+Apply To Configurable/Grouped Product,Bruk på konfigurerbart/gruppert produkt
+Approved,Godkjent
+Are you sure you want to delete this category?,Er du sikker på at du vil slette denne kategorien?
+Are you sure you would like to remove all products from your comparison?,Er du sikker på at du ønskjer å fjerne alle produktane i samanlikningslista?
+Are you sure you would like to remove this item from the compare products?,Er du sikker på at du vil fjerne dette elementet frå produktsamanlikningslista?
+Are you sure?,Er du sikker?
+As low as:,Frå
+Assign,Angi
+Assign product link,Angi produktlink
+Assign product to category,Angi produkt til kategori
+Assigned Products,Tilordna produkt
+Associated Products,Tilknytta produkt
+Attrib. Set Name,Namn på attributtsett
+Attribute Code,Attributtkode
+Attribute Information,Attributtinformasjon
+Attribute Label,Attributtmerkelapp
+Attribute Model,Attributtmodell
+Attribute Name:,Attributtnamn:
+Attribute Properties,Attributteigenskapar
+Attribute Set,Attributtsett
+"Attribute group with the ""/name/"" name already exists","Attribute gruppe med ""/name/"" navnet eksisterer allerede"
+Attribute model not defined,Attributtmodell ikkje definert
+Attribute with the same code already exists,Attributt med samme kode eksisterer allerede
+Attributes,Attributtar
+Attrribute names can be specified per store.,Atributtsett kan angis per butikk.
+Autogenerate,Autogenerer
+Availability,Tilgjengelegheit
+Availability: In stock.,På lager.
+Availability: Out of stock.,Ikkje på lager.
+Back,Tilbake
+Backend Model,Administrasjonmodell
+Backend Table,Administrasjontabell
+Backend Table Title,Tittel på adm.tabell
+Backorders,Restordrar
+Base directory to upload image file is not specified,Katalog for opplasting av biletfil er ikkje spesifisert
+Based On,Basert på
+Best Value,Beste tilbud
+Block after Info Column,Block etter Infokolonne
+Bottom/Left,Bunn/Venstre
+Bottom/Right,Bunn/Høgre
+Browse By,Bla gjennom basert på
+Buy %1$s for %2$s,Kjøp %1$s for %2$s
+Buy %1$s for %2$s (%3$s incl. tax) each,Kjøp %1$s for %2$s (%3$s inkl mva) hver
+Buy %1$s for %2$s each,Kjøp %1$s for %2$s hver
+Can be used only with catalog input type Dropdown,"Kan kun brukes med inndatatype ""Nedtrekksliste"""
+"Can be used only with catalog input type Dropdown, Multiple Select and Price","Kan kun brukes med inndatatype ""Nedtrekksliste"
+Can't create image.,Kan ikkje opprette bilete.
+Cannot create writeable directory '%s',Kan ikkje opprette skrivbar katalog '%s'
+Cart Item Attribute,Vareattributt
+Catalog,Katalog
+Catalog Input Type for Store Owner,Inndatatype for butikkeier
+Catalog Price Scope,Omfang for katalogpris
+Catalog Section,Varekatalog
+"Catalog, Search","Katalog, Søk"
+Categories,Kategoriar
+Categories Sitemap,Sidekart over kategoriar
+Category,Kategori
+Category API,Kategori API
+Category Data,Kategoridata
+Category Navigation:,Kategorinavigering:
+Category Products,Produkter i kategori
+Category Top Navigation,Navigering
+Category URL Suffix,Kategori URL
+Category attributes API,Kategori attributt API
+Category delete error,Feil ved sletting av kategori
+Category deleted,Kategorien vart sletta
+Category move error,Feil ved flytting av kategori
+Category must be instance of Mage_Catalog_Model_Category,Kategori må være instans av Mage_Catalog_Model_Category
+Category saved,Kategorien vart lagra
+Change,Endre
+Change or Retrieve attribute store view,Endre eller hent attributt butikkvisning
+Change status,Endre status
+Check items to add to the cart or,Merk produkta som skal legges i handlekorga
+Choose an Option...,Vel eit alternativ...
+Choose option...,Vel alternativ...
+Clear All,Fjern alle
+Clear All Items,Fjern alle varar
+Close Window,Lukk vindauga
+Collapse All,Utvid alle
+Comparable,Samanliknbar
+Comparable on Front-end,Samanliknbar i Frontend
+Compare Items,Samanlikn varer
+Compare Products,Produktsamanlikning
+Compare Products (%d),Samanlikn produkt (%d)
+Compare Products - %d Items,Sammenlikn produkt - %d varer
+Compare Products List,Produktsamanlikningsliste
+Compare list successfully cleared,Samanlikningslista er nå tom.
+Conditions Combination,Kombinasjon av betingelsar
+Configurable Product,Konfigurerbart produkt
+Configurable Product Settings,Innstillingar for konfigurerbart produkt
+Continue,Fortsett
+Copy From Configurable,Kopier fra konfigurerbart
+Country/State,Land/Fylke
+Create,Opprett
+Create (Upload),Opprett (Last opp)
+Create Empty,Opprett tom
+Create Product Settings,Innstillingar for opprettelse av produkt
+Create Simple Associated Product,Lag tilhøyrande enkeltprodukt
+Create new category,Opprett ny kategori
+Create new product,Opprett nytt produkt
+Cross-sells,Salg av tilbehøyr
+Currently Shopping by,Viser nå varer etter:
+Custom Design,Tilpassa design
+Custom Options,Eigendefinerte alternativer
+Customer Group,Kundegruppe
+Customers Reviews,Kundeomtaler
+Customers Tagged Product,Produkter tagget av kunder
+Customers for alert %s was successfuly added to queue,Kunder som skal varslas om %s blei lagt i køen
+Data Type for Saving in Database,Datatype for lagring i database
+Date,Dato
+Date & Time Custom Options,Alternativer for dato og tid
+Date Subscribed,Abonneringsdato
+Date fields order,Dato-sortering
+Datetime,Dato og tid
+Decimal,Desimal
+Decimal Number,Desimaltal
+Declare attribute value saving scope,Angi omfang for lagring av attributtverdi
+Default Qty,Standardantal
+Default Values,Standardverdiar
+Default price,Standardpris
+Default value,Standardverdi
+Delete,Slett
+Delete Attribute,Slett attributt
+Delete Attribute Set,Slett attributtsett
+Delete Category,Slett kategori
+Delete Option,Slett val
+Delete Row,Slett
+Delete Search,Slett søk
+Delete Selected Group,Slett vald gruppe
+Delete category,Slett kategori
+Delete product,Slett produkt
+Depends on design theme,Avhenger av template
+Design,Design
+Disabled,Deaktivert
+Display in Suggested Terms,Vis i foreslåtte fraser
+Double click on a group to rename it,Dobbelklikk på en gruppe for å endre namn
+Double click on above image to view full picture,Dobbelklikk på biletet for å sjå det i full storleik
+Dropdown,Nedtrekksliste
+Duplicate,Dupliser
+Duplicate website tier price customer group and quantity.,Dupliser kundegruppe og antal for nettstadens nivåpris.
+"Duplicate website, country and state tax found.","Website, land eller mvasats finnes fra før."
+Edit,Endre
+Edit Attribute Set '%s',Rediger attributtsett '%s'
+Edit Product Attribute,Rediger produktattributt
+"Edit Product Attribute ""%s""","Rediger produktattributt ""%s"""
+Edit Search,Rediger søk
+Edit Search '%s',Rediger søk '%s'
+Email,Epost
+Email to a Friend,Tips ein ven
+Empty,Tom
+Enabled,Aktivert
+Error during retrieval of option value: %s,Feil under henting av valalternativ: %s
+Error while adding customers for %s alert. Message: %s,Feil under innlegging av kundar for varsling om %s. Melding: %s
+Error while saving this group. Group with the same name already exists.,Feil under lagring av denne gruppen. Gruppenamnet eksisterar allereie.
+Error while saving this group. Please try again later.,Feil under lagring av denne gruppen. Prøv igjen seinare.
+Exclude,Ekskluder
+Expand All,Utvid alle
+Failed,Feila
+Failed to move file: %s,Feil under flytting av fil: %s
+Feature Products,Anbefalte produkter
+File options format is not valid,Filformat ikkje gyldig
+File upload failed,Filopplasting feila
+Filter model name must be declared,Filtermodellnamn må vere angitt
+Filter must be as object. Set correct filter please,Filter må vere et objekt. Sett korrekt filter
+Filterable (no results),Filtrerbart (ingen resultater)
+Filterable (with results),Filtrerbart (med resultater)
+Filters must be as array,Filtre må vere ein tabell
+First Name,Fornamn
+Fixed,Fast
+Flat Catalog module has a limit of %2$d filterable and/or sort able attributes. Currently there are %1$d. Please reduce the number of filterable/sort able attributes in order to use this module.,Flat Catalog module has limit of %2$d filterable and/or sort able attributes. Currently there are %1$d. Please reduce the number of filterable/sort able attributes in order to use this module.
+For internal use. Must be unique with no spaces,For internt bruk. Må vere unikt utan mellomrom
+For reindex enabled product(s) you need specify store or product,For reindex enabled product(s) you need specify store or product
+Frontend,Forside
+Frontend Model,Modell for Frontend
+Frontend Properties,Frontend-eigenskapar
+Gallery,Galleri
+General Information,Generell informasjon
+Get special price,Spesialpris
+Global,Global
+Globally Editable,Redigerbar globalt
+Go to Home Page,Gå til hovedside
+Grid,Rutenett
+Grouped Product,Grupperte produkter
+Groups,Grupper
+Home,Hjem
+ID,ID:
+ID: %s,ID %s
+If you do not specify an option value for a specific store view then the default (Admin) value will be used.,If you do not specify an option value for a specific store view then the default (Admin) value will be used
+Image,Bilete
+Image content is not valid base64 data.,Image content is not valid base64 data
+Image file not found,Fant ikkje bilete
+Image not exists,Bilete eksisterar ikkle
+Image not specified.,Ingen bilete definert.
+Image type and information need to be specified for each store view.,Bilete og informasjon må vere spesifisert for kvar butikkvisning
+In Stock,På lager
+In stock,På lager
+In stock.,På lager.
+Incl. Tax,Inkl mva
+Input Type,Type
+Input Validation for Store Owner,Inndatavalidering for butikkeigar
+Integer,Heiltall
+Integer Number,Heiltall
+Invalid Tier Prices,Ugyldig prissetting
+Invalid attribute %s,ugyldig attributt %s
+"Invalid attribute option specified for attribute %s (%s), skipping the record","Ugyldig attributtvalg for attributt %s (%s), hopper over oppføringen"
+"Invalid attribute set specified, skipping the record","Ugyldig attributtsett, hopper over oppføringen"
+Invalid block: %s,Ugyldig blokk: %s
+Invalid category,Ugyldig kategori
+Invalid category IDs,Ugyldige kategori-IDer
+Invalid image file type,Ugyldig biletfil
+Invalid image type.,Ugyldig bilete.
+"Invalid option id specified for %s (%s), skipping the record","Ugyldig valg-ID spesifisert for %s (%s), hopper over oppføringen"
+"Invalid product type specified, skipping the record","Ugyldig produkttype spesifisert, hopper over oppføringen"
+Invalid store specified,Ugyldig butikk spesifisert
+"Invalid store specified, skipping the record","Ugyldig butikk spesifisert, hopper over oppføringen"
+Inventory,Lagerbeholdning
+Is Default,Er standard
+Is Required,Påkrevd
+Items %s to %s of %s total,Vare %s til %s av totalt %s
+Items that you don't want to show in the catalog or search results should have status 'Disabled' in the desired store.,Varer som ikke skal vises i katalogen eller i søkeresultater må ha status 'Deaktivert' i gjeldende butikk.
+Label,Merkelapp
+Last Name,Etternamn
+Last Notification,Siste varsling
+Learn More,Les meir
+Length of text is too long,Teksta  er for lang
+Letters,Bokstavar
+Letters(a-zA-Z) or Numbers(0-9),Bokstavar (a-zA-Z) eller tal (0-9)
+"Line %d, Email: %s","Linje %d, Epost: %s"
+"Line %d, SKU: %s","Linje %d, Varekode: %s"
+"Link (Related, Up sell, Cross sell)","Link (Relatert, Betre alternativ, Liknande)"
+Link product not exists.,Link-produkt finnast ikkje.
+List,Liste
+List Mode,Listemodus
+Manage Attribute Sets,Behandle attributtsett
+Manage Attributes,Behandle attributtar
+Manage Catalog Categories,Behandle varekategoriar
+Manage Categories,Behandle kategoriar
+Manage Label / Options,Behandle etikettar/val
+Manage Options (values of your attribute),Behandle val (verdiar for attributtet)
+Manage Product Attributes,Behandle produktattributter
+Manage Product Sets,Behandle produktklassar
+Manage Products,Behandle produkt
+Manage Stock,Behandle lager
+"Manage Titles (Size, Color, etc.)","Behandle overskrifter (storleik, farge, osv.)"
+Max Characters,Maks antal bokstavar
+Maximal Depth,Maksimal dybde
+Maximum Image Size,Maksimal storleik
+Maximum Qty Allowed in Shopping Cart,Største antal tillatt i handlekorga
+Maximum image height,Maksimal høgde
+Maximum image width,Maksimal breidde
+Maximum number of characters,Maks antal teikn
+Media Image,Bilete
+Minimum Lines Per Page,Minimum antal linjer pr side
+Minimum Qty Allowed in Shopping Cart,Minste antal tillatt i handlekorga
+Minimum Qty for Item's Status to be Out of Stock,Minsteantall før status blir endra til Ikkje på lager
+"Missing SKU, skipping the record","Manglar varekode, hopper over oppføringen"
+More Views,Flere visningar
+Move,Flytt
+Move category in tree,Flytt kategori i treet
+Multiple Select,Fleirval
+Name,Namn
+Name In %s,Namn i %s
+Name<br/>(For internal use),Namn<br/>(for internbruk)
+New Category,Ny kategori
+New Product,Nytt produkt
+New Product Attribute,Nytt produktattributt
+New Products,Nye produkt
+New Search,Nytt søk
+New Set Name,Nytt settnamn
+Next,Neste
+No,Nei
+No image,Bilde eksisterer ikke
+No layout updates,Ingen oppdateringar av sideoppsett
+No options of this product are available.,Ingen val er tilgjengelig for dette produktet.
+No product collections found,Ingen produktsamlinger funnet
+None,Ingen
+Not shared with other products,Ikkje delt med andre produkt
+Notify Low Stock RSS,RSS-varsling om lav lagerbehaldning
+Notify for Quantity Below,Varsle om lagerbehaldning er under
+Nowhere,Ingen stader
+Number of Uses,Antal anvendelsar
+Number of results<br/>(For last time placed),Antal resultater<br/>(For siste plasseringstidspunkt)
+OR,ELLER
+Old Price:,Ordin&aelig;r pris:
+Option validation failed to add product to cart,Feila
+Option:,Val:
+Options Control,Valalternativ
+Options is required,Valalternativ krevast
+Our customer service is available 24/7. Call us at (555) 555-0123.,Vår kundeservice er tilgjengelig døgnet rundt.
+Out of Stock,Utseld
+Out of stock,Utseld
+Out of stock.,Utseld
+PM,PM:
+Page Title Separator,Skilleteikn i sidetittel
+Page:,Side:
+Parent Category,Overordna kategori
+Pending,Ventande
+Pending Reviews RSS,Ventande Omtalar-RSS
+Percentage,Prosentdel
+Please add rows to option.,Legg til ny rad for alternativet.
+Please be careful as once you click on the row it will load package data form the selected file and all unsaved form data will be lost.,Please be careful as once you click on the row it will load package data form the selected file and all unsaved form data will be lost
+Please click on Close Window button if it won't be closed automatically,Please click on Close Window button if it won't be closed automatically.
+Please enter a new group name,Skriv inn eit nytt gruppenamn
+"Please refresh ""Catalog Rewrites"" and ""Layered Navigation Indices"" in System -> <a href=""%s"">Cache Management</a>","Refresh ""Catalog Rewrites"" and ""Layered Navigation Indices"" in System -> <a href=""%s"">Cache Management</a>"
+Please select  items,Vel  artiklar
+Please select one or more attributes.,Vel eitt eller fleire attributtar.
+Please select product(s),Vel produkt
+Please select products for attributes update,Vel produkt for oppdatering av attributt
+Please select static block ...,Vel ein statisk blokk
+Please set up merge date/time .,Sett opp dato/tid .
+Please specify date required option(s),Spesifiser påkrevd dato alternativ
+Please specify the product option(s),Spesifiser produktalternativ
+Please specify the product required option(s),Spesifiser de påkrevde alternativane
+Please specify the product(s) quantity,Spesifiser antal
+Please specify time required option(s),Spesifiser påkrevd tidsalternativ
+"Please, use four-digit year format",Bruk firesifra datoformat
+Position,Plassering
+Position In Layered Navigation,Plassering i lagdelt navigasjon
+Position of attribute in layered navigation block,Plassering av attributt i lagdelt navigasjonsblokk
+Prev,Førre
+Previous,Førre
+Price,Pris
+Price Type,Pristype
+Price values for options should be specified in system base currency.,Prisar for valalternativer mÌ´ angis i standardvaluta.
+Price:,Pris:
+Print This Page,Skriv ut
+"Problem saving the collection, aborting. Error: %s",Problem ved lagring av denne samlinga. Feil: %s
+Product,Produkt
+Product %s successfully added to compare list,%s blei lagt til samanlikning.
+Product %s successfully removed from compare list,%s vart fjerna frŒ samanlikningslista.
+Product API,Produkt API
+Product Alerts,Produktvarsling
+Product Attribute,Produktattributt
+Product Attributes,Produktatttributtar
+Product Categories,Produktkategorier
+Product Description,Produktbeskrivelse
+Product Image Placeholders,Plasshaldar for produktbilete
+Product Image Watermarks,Produktbiletevatnmerke
+Product Images,Produktbilete
+Product Images API,ProduktbileteAPI
+Product In Websites,Produkt i Nettstader
+Product Info Column,Kolonne for produktinfo
+Product Information,Produktinformasjon
+Product Name,Produktnamn
+Product Reviews,Produktomtalar
+Product Tags,Produkttagger
+Product Tier Price API,Produkt fleirpris API
+Product Type,Produkttype
+Product URL Suffix,Produkt URL Suffix
+Product attribute sets API,Produkt attributtsett API
+Product attribute was successfully deleted,Produktattributtet ble sletta
+Product attribute was successfully saved,Produktattributtet ble lagra
+Product attributes API,Produktattributt API
+Product collection expected,Produktsamling forventa
+Product deleted,Produkt sletta
+Product duplicated,Produkt duplisert
+Product has required options,Produktet har påkrevde alternativ
+"Product links API (related, cross sells, up sells)","Produktlink API (related, cross sells, up sells)"
+Product listing sort by,Produktlisting sortert etter
+Product saving error.,Feil under lagring av produkt.
+Product saving error. ,Feil under lagring. 
+Product types API,Produkttype API
+Product was successfully created.,Produktet vart lagt til.
+Product was successfully saved.,Produktet ble lagra.
+Product with this combination of attributes already associated to configurable.,Eit produkt med denne attributtkombinasjonen er allereie tilknytta konfigurerbart produkt.
+Products,Produkt
+Products Information,Produktinformasjon
+Products Reviews,Produktomtalar
+Products Sitemap,Sidekart over produkt
+Products only,Kun produkt
+Products per Page on Grid default value,Standard antal produkt per side i rutenettvisning
+Products per Page on List allowed values,Produkter per side ved listevisning
+Products per Page on List default value,Standard antal produkter per side i listevisning
+Products per page on Grid allowed values,Produkt per side ved rutenett
+Properties,Eigenskaper
+Qty,Antal
+Qty Uses Decimals,Desimalar i antalet
+Qty for Item's Status to become Out of Stock,Antal for at var skal få status Ikkje på lager
+Quick Create,Opprett direkte
+Quick Overview,Oversikt
+Quick simple product creation,Legg raskt til nytt produkt
+"Records for ""","Oppføringer for """
+Redirect,Vidaresending
+Redirect URL,URL for vidaresending
+Regular Price:,Vanleg pris:
+Related Products,Relaterte produkt
+Remove,Fjern
+Remove Product,Fjern produkt
+Remove Product From Websites,Fjern produkt fra Nettsteder
+Remove This Item,Fjern denne vara
+Remove product assignment,Fjern produkttilhøyrigheit
+Remove product image,Fjern produktbilete
+Remove product link,Fjern produktlink
+Required,Obligatorisk
+Reset,Tilbakestill
+Results,Resultater
+Retrieve attribute data,Retrieve attribute data
+Retrieve attribute list,Retrieve attribute list
+Retrieve attribute options,Retrieve attribute options
+Retrieve categories tree,Retrieve categories tree
+Retrieve category attributes,Retrieve category attributes
+Retrieve category data,Retrieve category data
+Retrieve hierarchical tree,Retrieve hierarchical tree
+Retrieve linked products,Retrieve linked products
+Retrieve list of assigned products,Retrieve list of assigned products
+Retrieve one level of categories by website/store view/parent category,Retrieve one level of categories by website/store view/parent category
+Retrieve product,Retrieve product
+Retrieve product attribute sets,Retrieve product attribute sets
+Retrieve product image,Retrieve product image
+Retrieve product image list,Retrieve product image list
+Retrieve product image types,Retrieve product image types
+Retrieve product link type attributes,Retrieve product link type attributes
+Retrieve product link types,Retrieve product link types
+Retrieve product tier prices,Retrieve product tier prices
+Retrieve product types,Retrieve product types
+Retrieve products data,Retrieve products data
+Retrieve products list by filters,Retrieve products list by filters
+Review successfully deleted,Omtalen vart sletta
+Review was saved successfully,Omtalen vart lagra
+Review was successfully saved,Omtalen vart lagra
+Reviews,Produktomtalar
+Roll Over for preview,Rull over for forhåndsvisning
+Root,Toppnivå
+SKU,Varekode
+Save,Lagre
+Save And Continue Edit,Lagre og fortsett å redigere
+Save Attribute,Lagre attributt
+Save Attribute Set,Lagre attributtsett
+Save Category,Lagre kategori
+Save Search,Lagre søk
+Saved ,Lagra
+Scope,Omfang
+Search,Søk
+Search Engine Optimizations,Søkemotoroptimalisering
+Search Information,Søkeinformasjon
+Search Query,Søk
+Search Term was successfully saved,Søkefrase vart lagra
+Search Term with such search query already exist.,"Søkefrase med denne spørringen finnast allereie."""
+Search was successfully deleted,Søket vart sletta
+Searchable,Søkbar
+Select Configurable Attributes ,Vel konfigurerbare attributtar 
+Select type of option,Vel alternativ
+Select type options required values rows.,Vel.
+Selected Product Types,Valde produkttypar
+Selected configuration is not available.,Valgt konfigurasjon er ikkje tilgjengeleg.
+Send Count,Antal
+Set Ascending Direction,Bruk stigande rekkefølge
+Set Descending Direction,Bruk synkande rekkefølge
+Set Name,Angi namn
+Set Root Category For Store,Angi toppkategori for butikken
+"Set root category for this store in the <a href=""%s"">configuration</a>","Angi toppkategori for butikken i <a href=""%s"">konfigurasjonen</a>"
+Set special price,Sett spesialpris
+Set/Get current store view,Sjå/vis nåværande butikkvisning
+Settings,Innstillingar
+Shop by,Handle basert på
+Shopping Options,Filter
+Show,Vis
+Show Details,Vis detaljar
+Show Tags,Vis tagger
+Simple Product,Enkeltprodukt
+Site Map,Sidekart
+Sitemap,Sidekart
+"Skip import row, is not valid value ""%s"" for field ""%s""","Hopper over rad, ""%s"" er ikkje ein gyldig verdi for felt ""%s"""
+"Skip import row, required field ""%s"" for new customer not defined","Hopper over rad, obligatorisk felt ""%s"" ikkje definert for ny kunde"
+"Skip import row, required field ""%s"" for new products not defined","Hopper over rad, obligatorisk felt ""%s"" ikkje definert for nytt produkt"
+"Skip import row, required field ""%s"" not defined","Hopper over rad, obligatorisk felt ""%s"" ikkje definert"
+"Skip import row, store ""%s"" field not exists","Hopper over import, butikk ""%s"" felt eksisterar ikkje"
+Sort Order,Sorteringsrekkefølge
+Sort by,Sorter etter
+Source Model,Kildemodell
+"Special Price","Tilbodspris"
+Starting at:,Startar:
+Static,Statisk
+Static block and products,Statisk blokk og produkt
+Static block only,Kun statisk blokk
+Status,Status
+Stock Availability,Lagerstatus
+Store,Butikk
+Store View,Butikkvisning
+Stretch,Strekk
+Subscribe to Feed,Abonner på Feed
+Subscribe to RSS Feed,Abonner på RSS Feed
+Super product attributes configuration,Attributtkonfigurasjon for overordna produkt
+Synonym For,Synonym for
+Synonym for,Synonym for
+System,System
+System Properties,Systemegenskaper
+Tag Name,Taggnamn
+Tax,Mva
+Text,Tekst
+Text Area,Tekstområde
+Text Field,Tekstfelt
+There are no %s available.,Ingen %s tilgjengeleg.
+There are no customers for this alert,Ingen kundar abonnerar på dette varselet
+There are no products matching the selection.,Det finnes ingen produkt som svarar til vala.
+There was an error while adding products to websites,Ein feil oppstod under innlegging av produkta i nettstad
+There was an error while cleared compare list,Det oppsto ein feil ved sletting av samanlikningsliste
+There was an error while removing products from websites,Ein feil oppstod under fjerning av produkta frå nettstad
+There was an error while updating product(s) attributes,Det oppstod ein feil ved oppdatering av produktattributtane
+There was an error while updating product(s) status,Det oppsto ein feil ved oppdatering av produktstatus
+This attribute no longer exists,Attributtet eksisterar ikkje lengre
+"This group contains attributes, used in configurable products. Please move these attributes to another group and try again.","This group contains attributes, used in configurable products. Please move these attributes to another group and try again"
+This group contains system attributes. Please move system attributes to another group and try again.,Denne gruppen inneholder systemattributtar. Flytt systemattributtane til ei anna gruppe og prøv igjen.
+This is a required option,Påkrevd alternativ
+This search no longer exists,Dette søket eksisterar ikkje lenger
+Tier Pricing,Nivåprising
+Tile,Snu
+Time format,Tidsformat
+Title,Tittel
+Top/Left,Topp/Venstre
+Top/Right,Topp/Høgre
+Total Qty Base Items,Totalt antal
+Total incl. Tax: %1$s,Total inkl mva: %1$s
+Total of %d record(s) were successfully deleted,Totalt %d oppføring(er) vart sletta
+Total of %d record(s) were successfully updated,Totalt %d oppføring(er) vart oppdatert
+Type,Type
+Unable to complete request. Please try again later.,Ikkje i stand til å utføre forespørselen. Prøv igjen seinere.
+Unable to find a search term to delete,Kunne ikkje finne søkefrase å slette
+Unable to find an attribute to delete,Kunne ikkje finne attributt å slette
+Unable to get product id.,Ikkje i stand til å hente produkt-ID.
+Unassigned Attributes,Ikkje tilordna attributtar
+Unique Value,Unik verdi
+Unique Value (not shared with other products),Unik verdi (ikkje felles med andre produkt)
+Unknown attribute: %s,Ukjent attributt: %s
+Up-sells,Betre alternativer
+Update,Oppdater
+Update Attributes,Oppdater attributtar
+Update Tier Price,Oppdater multipris
+Update assigned product,Oppdater tilknytta produkt
+Update attributes,Oppdater attributtar
+Update category,Oppdater kategori
+Update product,Oppdater produkt
+Update product image,Oppdater produktbilete
+Update product link,Oppdater produktlink
+Update product tier prices,Oppdater multipriser
+Upload new product image ,Last opp nytt produktbilete
+Url,Adresse
+Url Rewrite Management,Behandle URL-omskrivningar
+Url rewrie save problem.,Url rewrie save problem
+Use Config Settings,Bruk konfigurasjonsinnstillingar
+Use Default Value,Bruk standardverdi
+Use Flat Catalog Category,Bruk Flat Catalog Kategori
+Use Flat Catalog Product,Bruk Flat Catalog Produkt
+Use In Layered Navigation,Bruk i lagdelt navigering
+Use In Layered Navigation<br/>(Can be used only with catalog input type 'Dropdown'),"Bruk i lagdelt navigasjon<br/>(Kun viss inndatatype er ""Nedtrekksliste"")"
+Use In Search Results Layered Navigation,Bruk i filtrerte søkeresultat
+Use JavaScript Calendar,Bruk Javascript-kalendar
+Use To Create Configurable Product,Bruk i konfigurerbart produkt
+Use Tree Like Category Sitemap,Bruk trevisning i sidekart for kategori
+Use categories path for product URLs,Bruk kategoristi i produkt-URL
+Use in advanced search,Bruk i avansert søk
+Use in quick search,Bruk i hurtigsøk
+Used for sorting in product listing,Brukt i sortering i produktvisning
+Used in product listing,Brukt i produktvisning
+Values Required,Verdiar krevast
+Varchar,VarChar
+View as,Visning
+Virtual Product,Virtuelle produkt
+Visibility,Synligheit
+Visible,Synlig
+Visible on Catalog Pages on Front-end,Synlig i varekatalog i Frontend
+Visible on Product View Page on Front-end,Synlig på produktside i Frontend
+Watermark,Vatnmerke
+Watermark Default Size,Standardstørrelse på vatnmerke
+Watermark Position,Vatnmerke-posisjon
+We Also Recommend,Vi anbefalar også
+Web Site Item Must be checked,Webside Item må være markert
+Web Site Store Must be checked,Website Store må være markert
+Website,Nettstad
+Websites,Nettstader
+Wrong BuyRequest instance in options group,Wrong BuyRequest instance in options group
+Wrong option instance type in options group,Wrong option instance type in options group
+Wrong option type to get group instance.,Wrong option type to get group instance
+Wrong product instance type in options group,Wrong product instance type in options group
+Wrong quote item instance in options group,Wrong quote item instance in options group
+Wrong quote item option instance in options group,Wrong quote item option instance in options group
+Year Range,Rekkevidde år
+Yes,Ja
+Yes/No,Ja/Nei
+You cannot delete this attribute,Du kan ikkje slette dette attributtet
+You cannot edit this attribute,Du kan ikkje endre dette attributtet
+You cannot remove system attribute from this set.,Du kan ikkje fjerne systemattributtar frå dette settet.
+You cannot update this attribute,Du kan ikkje oppdatere dette attributtet
+You have no items to compare.,Du har ingen produkter å samanlikne.
+You may also be interested in the following product(s),Du er kanskje også interessert i følgjande produkt(er)
+Zoom In,Forstørre
+Zoom Out,Zoom ut
+[GLOBAL],[Global]
+and,og
+and above,og over
+cache refresh needed,Krever Cache Refresh
+categories,kategoriar
+comma separated,kommaseparart
+each,kvar
+ex. http://domain.com,f.eks.: http://domain.com
+leave blank if its not an image,la vere dersom det ikkje er et bilete
+must be in the allowed values list,må vere innan den angitte lista
+per page,per side
+products,produkter
+px.,px.
+save,Lagre
+select all,vel alle
+unselect all,fjern alle
+x,X
+Description,Beskrivelse
+Short Description,Kort beskrivelse
+Tax Class,Momsklasse
+There are no products matching the selection.,Vi fann ingen produktar som matcher dine val.
+Availability:,Tilgjengeligheit:
+Qty:,Antal:
+Compare Products,Sammenlikn produkter
+You have no items to compare.,Du har ingen varer å samanlikne.
+Site Map,Site Map
+Go to Home Page,Gå til startsida
+Home,Heim
+Our customer service is available 24/7. Call us at (555) 555-0123.,Vår kundeservice er tilgjengelig. kontakt oss på www.hasla.no
+Categories,Kategoriar
+Keep your eyes open for our special Back to School items and save A LOT!,Keep your eyes open for our special Back to School items and save A LOT!
+Categories Sitemap,Categories Sitemap
+Are you sure you would like to remove all products from your comparison?,Are you sure you would like to remove all products from your comparison?
+Clear All,Clear All
+Products Sitemap,Products Sitemap
+Not Available,Midlertidig utsolgt
+Select ring size,Vel storleik
+"SEE MORE","SJÅ MEIR"
+"SEE ALL","SJÅ ALT"
